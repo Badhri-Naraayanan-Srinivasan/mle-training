@@ -1,0 +1,1081 @@
+Script started on 2023-05-02 13:00:13+05:30 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="127" LINES="10"]
+[?2004h(base) ]0;badhri@TIGER01766: ~[01;32mbadhri@TIGER01766[00m:[01;34m~[00m$ [7mgit config --list --show-origin[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgit config --list --show-origin
+[?2004l[?1h=[K[?1l>[?2004h(base) ]0;badhri@TIGER01766: ~[01;32mbadhri@TIGER01766[00m:[01;34m~[00m$ git config --global user.name "[7mBadhri-Naraayanan-Srinivasan[27mBadhri-Naraayanan-Srinivasan"
+[?2004l[?2004h(base) ]0;badhri@TIGER01766: ~[01;32mbadhri@TIGER01766[00m:[01;34m~[00m$ git config --global user.name "Badhri-Naraayanan-Srinivasan"[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kemail badhri.srinivasa@tigeranalytics.com
+[?2004l[?2004h(base) ]0;badhri@TIGER01766: ~[01;32mbadhri@TIGER01766[00m:[01;34m~[00m$ [7mgit config --global init.defaultBranch main[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgit config --global init.defaultBranch main
+[?2004l[?2004h(base) ]0;badhri@TIGER01766: ~[01;32mbadhri@TIGER01766[00m:[01;34m~[00m$ [7mgit config --list[27mgit config --list
+[?2004l[?1h=user.name=Badhri-Naraayanan-Srinivasan[m
+user.email=badhri.srinivasa@tigeranalytics.com[m
+init.defaultbranch=main[m
+[K[?1l>[?2004h(base) ]0;badhri@TIGER01766: ~[01;32mbadhri@TIGER01766[00m:[01;34m~[00m$ [7mgit config user.name[27mgit config user.name
+[?2004lBadhri-Naraayanan-Srinivasan
+[?2004h(base) ]0;badhri@TIGER01766: ~[01;32mbadhri@TIGER01766[00m:[01;34m~[00m$ [7mcd /home/user/my_project[27mcd /home/user/my_project
+[?2004lbash: cd: /home/user/my_project: No such file or directory
+[?2004h(base) ]0;badhri@TIGER01766: ~[01;32mbadhri@TIGER01766[00m:[01;34m~[00m$ cd[K[Kls
+[?2004l[0m[01;34mminiconda3[0m  my_git_session  my_miniconda_session
+[?2004h(base) ]0;badhri@TIGER01766: ~[01;32mbadhri@TIGER01766[00m:[01;34m~[00m$ cd ..
+[?2004l[?2004h(base) ]0;badhri@TIGER01766: /home[01;32mbadhri@TIGER01766[00m:[01;34m/home[00m$ ls
+[?2004l[0m[01;34mbadhri[0m
+[?2004h(base) ]0;badhri@TIGER01766: /home[01;32mbadhri@TIGER01766[00m:[01;34m/home[00m$ cd /badh[K[K[K[K[Kbadhri/
+[?2004l[?2004h(base) ]0;badhri@TIGER01766: ~[01;32mbadhri@TIGER01766[00m:[01;34m~[00m$ git clone [7mhttps://github.com/Badhri-Naraayanan-Srinivasan/mle-training.git[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Chttps://github.com/Badhri-Naraayanan-Srinivasan/mle-training.git
+[?2004lCloning into 'mle-training'...
+remote: Enumerating objects: 20, done.[K
+remote: Counting objects:   5% (1/20)[Kremote: Counting objects:  10% (2/20)[Kremote: Counting objects:  15% (3/20)[Kremote: Counting objects:  20% (4/20)[Kremote: Counting objects:  25% (5/20)[Kremote: Counting objects:  30% (6/20)[Kremote: Counting objects:  35% (7/20)[Kremote: Counting objects:  40% (8/20)[Kremote: Counting objects:  45% (9/20)[Kremote: Counting objects:  50% (10/20)[Kremote: Counting objects:  55% (11/20)[Kremote: Counting objects:  60% (12/20)[Kremote: Counting objects:  65% (13/20)[Kremote: Counting objects:  70% (14/20)[Kremote: Counting objects:  75% (15/20)[Kremote: Counting objects:  80% (16/20)[Kremote: Counting objects:  85% (17/20)[Kremote: Counting objects:  90% (18/20)[Kremote: Counting objects:  95% (19/20)[Kremote: Counting objects: 100% (20/20)[Kremote: Counting objects: 100% (20/20), done.[K
+remote: Compressing objects:   5% (1/19)[Kremote: Compressing objects:  10% (2/19)[Kremote: Compressing objects:  15% (3/19)[Kremote: Compressing objects:  21% (4/19)[Kremote: Compressing objects:  26% (5/19)[Kremote: Compressing objects:  31% (6/19)[Kremote: Compressing objects:  36% (7/19)[Kremote: Compressing objects:  42% (8/19)[Kremote: Compressing objects:  47% (9/19)[Kremote: Compressing objects:  52% (10/19)[Kremote: Compressing objects:  57% (11/19)[Kremote: Compressing objects:  63% (12/19)[Kremote: Compressing objects:  68% (13/19)[Kremote: Compressing objects:  73% (14/19)[Kremote: Compressing objects:  78% (15/19)[Kremote: Compressing objects:  84% (16/19)[Kremote: Compressing objects:  89% (17/19)[Kremote: Compressing objects:  94% (18/19)[Kremote: Compressing objects: 100% (19/19)[Kremote: Compressing objects: 100% (19/19), done.[K
+remote: Total 20 (delta 4), reused 0 (delta 0), pack-reused 0[K
+Receiving objects:   5% (1/20)Receiving objects:  10% (2/20)Receiving objects:  15% (3/20)Receiving objects:  20% (4/20)Receiving objects:  25% (5/20)Receiving objects:  30% (6/20)Receiving objects:  35% (7/20)Receiving objects:  40% (8/20)Receiving objects:  45% (9/20)Receiving objects:  50% (10/20)Receiving objects:  55% (11/20)Receiving objects:  60% (12/20)Receiving objects:  65% (13/20)Receiving objects:  70% (14/20)Receiving objects:  75% (15/20)Receiving objects:  80% (16/20)Receiving objects:  85% (17/20)Receiving objects:  90% (18/20)Receiving objects:  95% (19/20)Receiving objects: 100% (20/20)Receiving objects: 100% (20/20), 8.13 KiB | 2.71 MiB/s, done.
+Resolving deltas:   0% (0/4)Resolving deltas:  25% (1/4)Resolving deltas:  50% (2/4)Resolving deltas:  75% (3/4)Resolving deltas: 100% (4/4)Resolving deltas: 100% (4/4), done.
+[?2004h(base) ]0;badhri@TIGER01766: ~[01;32mbadhri@TIGER01766[00m:[01;34m~[00m$ [7mgit status[27mgit status
+[?2004lfatal: not a git repository (or any of the parent directories): .git
+[?2004h(base) ]0;badhri@TIGER01766: ~[01;32mbadhri@TIGER01766[00m:[01;34m~[00m$ git statusclone https://github.com/Badhri-Naraayanan-Srinivasan/mle-training.git mle-training
+[?2004lfatal: destination path 'mle-training' already exists and is not an empty directory.
+[?2004h(base) ]0;badhri@TIGER01766: ~[01;32mbadhri@TIGER01766[00m:[01;34m~[00m$ ls
+[?2004l[0m[01;34mminiconda3[0m  [01;34mmle-training[0m  my_git_session  my_miniconda_session
+[?2004h(base) ]0;badhri@TIGER01766: ~[01;32mbadhri@TIGER01766[00m:[01;34m~[00m$ cd mle-training/
+[?2004l[?2004h(base) ]0;badhri@TIGER01766: ~/mle-training[01;32mbadhri@TIGER01766[00m:[01;34m~/mle-training[00m$ ls
+[?2004lREADME.md
+[?2004h(base) ]0;badhri@TIGER01766: ~/mle-training[01;32mbadhri@TIGER01766[00m:[01;34m~/mle-training[00m$ git at[K[Kstatus
+[?2004lOn branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+[?2004h(base) ]0;badhri@TIGER01766: ~/mle-training[01;32mbadhri@TIGER01766[00m:[01;34m~/mle-training[00m$ git add README
+[?2004lfatal: pathspec 'README' did not match any files
+[?2004h(base) ]0;badhri@TIGER01766: ~/mle-training[01;32mbadhri@TIGER01766[00m:[01;34m~/mle-training[00m$ git add README.md
+[?2004l[?2004h(base) ]0;badhri@TIGER01766: ~/mle-training[01;32mbadhri@TIGER01766[00m:[01;34m~/mle-training[00m$ git staus
+[?2004lgit: 'staus' is not a git command. See 'git --help'.
+
+The most similar command is
+	status
+[?2004h(base) ]0;badhri@TIGER01766: ~/mle-training[01;32mbadhri@TIGER01766[00m:[01;34m~/mle-training[00m$ git staustus
+[?2004lOn branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+[?2004h(base) ]0;badhri@TIGER01766: ~/mle-training[01;32mbadhri@TIGER01766[00m:[01;34m~/mle-training[00m$ git status -s
+[?2004l[?2004h(base) ]0;badhri@TIGER01766: ~/mle-training[01;32mbadhri@TIGER01766[00m:[01;34m~/mle-training[00m$ git diff
+[?2004l[?1h=[K[?1l>[?2004h(base) ]0;badhri@TIGER01766: ~/mle-training[01;32mbadhri@TIGER01766[00m:[01;34m~/mle-training[00m$ git [K[K[K[Kecho '#test line' >>README.md
+[?2004l[?2004h(base) ]0;badhri@TIGER01766: ~/mle-training[01;32mbadhri@TIGER01766[00m:[01;34m~/mle-training[00m$ git status
+[?2004lOn branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	[31mmodified:   README.md[m
+
+no changes added to commit (use "git add" and/or "git commit -a")
+[?2004h(base) ]0;badhri@TIGER01766: ~/mle-training[01;32mbadhri@TIGER01766[00m:[01;34m~/mle-training[00m$ git diff
+[?2004l[?1h=[1mdiff --git a/README.md b/README.md[m[m
+[1mindex f0f8111..3971116 100644[m[m
+[1m--- a/README.md[m[m
+[1m+++ b/README.md[m[m
+[36m@@ -1 +1 @@[m[m
+[31m-# mle-training[m[m
+\ No newline at end of file[m[m
+[32m+[m[32m# mle-training#test line[m[m
+[K[?1l>[?2004h(base) ]0;badhri@TIGER01766: ~/mle-training[01;32mbadhri@TIGER01766[00m:[01;34m~/mle-training[00m$ git diff --cached
+[?2004l[?1h=[K[?1l>[?2004h(base) ]0;badhri@TIGER01766: ~/mle-training[01;32mbadhri@TIGER01766[00m:[01;34m~/mle-training[00m$ git commit
+[?2004lOn branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	[31mmodified:   README.md[m
+
+no changes added to commit (use "git add" and/or "git commit -a")
+[?2004h(base) ]0;badhri@TIGER01766: ~/mle-training[01;32mbadhri@TIGER01766[00m:[01;34m~/mle-training[00m$ git add README.md
+[?2004l[?2004h(base) ]0;badhri@TIGER01766: ~/mle-training[01;32mbadhri@TIGER01766[00m:[01;34m~/mle-training[00m$ git add README.md[7Pcommit
+[?2004lhint: Waiting for your editor to close the file... [?2004h[?1049h[22;0;0t[1;10r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[8;57H(B[0;7m[ Reading... ](B[m[8;56H(B[0;7m[ Read 10 lines ](B[m[H(B[0;7m  GNU nano 6.2                             /home/badhri/mle-training/.git/COMMIT_EDITMSG                                       [1;126H(B[m[9d(B[0;7m^G(B[m Help[9;16H(B[0;7m^O(B[m Write Out   (B[0;7m^W(B[m Where Is    (B[0;7m^K(B[m Cut[9;61H(B[0;7m^T(B[m Execute     (B[0;7m^C(B[m Location    (B[0;7mM-U(B[m Undo[106G(B[0;7mM-A(B[m Set Mark[10d(B[0;7m^X(B[m Exit[10;16H(B[0;7m^R(B[m Read File   (B[0;7m^\(B[m Replace     (B[0;7m^U(B[m Paste[61G(B[0;7m^J(B[m Justify     (B[0;7m^/(B[m Go To Line  (B[0;7mM-E(B[m Redo[106G(B[0;7mM-6(B[m Copy[3d[36m# Please enter the commit message for your changes. Lines starting[4d# with '#' will be ignored, and an empty message aborts the commit.[5d#[6d# On branch main[7d# Your branch is up to date with 'origin/main'.[2d[39m(B[m[?12l[?25h[10;1H[?1049l[23;0;0t[?1l>[?1049h[22;0;0t[1;35r[?12l[?25h[39;49m]104(B[m[4l[?7h[H[2J[?2004h[?1h=[?1h=(B[0;7m  GNU nano 6.2                                        /home/badhri/mle-training/.git/COMMIT_EDITMSG                                                 [1;147H(B[m[3d[36m# Please enter the commit message for your changes. Lines starting[4d# with '#' will be ignored, and an empty message aborts the commit.[5d#[6d# On branch main[7d# Your branch is up to date with 'origin/main'.[8d#[9d# Changes to be committed:[10d#[38;5;208m       [36mmodified:   README.md[11d#[34d[39m(B[0;7m^G(B[m Help[34;17H(B[0;7m^O(B[m Write Out    (B[0;7m^W(B[m Where Is     (B[0;7m^K(B[m Cut[34;65H(B[0;7m^T(B[m Execute[81G(B[0;7m^C(B[m Location     (B[0;7mM-U(B[m Undo[34;113H(B[0;7mM-A(B[m Set Mark    (B[0;7mM-](B[m To Bracket[35d(B[0;7m^X(B[m Exit[35;17H(B[0;7m^R(B[m Read File    (B[0;7m^\(B[m Replace[49G(B[0;7m^U(B[m Paste[35;65H(B[0;7m^J(B[m Justify[81G(B[0;7m^/(B[m Go To Line   (B[0;7mM-E(B[m Redo[35;113H(B[0;7mM-6(B[m Copy[35;129H(B[0;7m^Q(B[m Where Was[?25l[?12l[?25h[2d[?25l[?12l[?25h[?25l[1;101H(B[0;7m*[147G(B[m7[2;33r8[2dM[1;35r[3;1H[?12l[?25h[?25l[33d(B[0;7mSave modified buffer?                                                                                                                               [34;1H Y(B[m Yes[K[35d(B[0;7m N(B[m No  [35;18H(B[0;7mC(B[m Cancel[K[33;23H[?12l[?25h[?25l[34d(B[0;7m^G(B[m Help[34;38H(B[0;7mM-D(B[m DOS Format[34;75H(B[0;7mM-A(B[m Append[34;112H(B[0;7mM-B(B[m Backup File[35d(B[0;7m^C(B[m Cancel[17G         [35;38H(B[0;7mM-M(B[m Mac Format[35;75H(B[0;7mM-P(B[m Prepend[35;112H(B[0;7m^T(B[m Browse[33d(B[0;7mFile Name to Write: /home/badhri/mle-training/.git/COMMIT_EDITMSG(B[m[?12l[?25h[?25l [1K (B[0;7m[ Writing... ](B[m[K[1;101H(B[0;7m [147G(B[m[33;66H(B[0;7m[ Wrote 11 lines ](B[m[J[35d[?12l[?25h[35;1H[?1049l[23;0;0t[?1l>[?2004l[KAborting commit due to empty commit message.
+[?2004h(base) ]0;badhri@TIGER01766: ~/mle-training[01;32mbadhri@TIGER01766[00m:[01;34m~/mle-training[00m$ git commit
+[?2004lhint: Waiting for your editor to close the file... [?2004h[?1049h[22;0;0t[1;35r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[33;68H(B[0;7m[ Reading... ](B[m[33;66H(B[0;7m[ Read 10 lines ](B[m[H(B[0;7m  GNU nano 6.2                                        /home/badhri/mle-training/.git/COMMIT_EDITMSG                                                 [1;147H(B[m[34d(B[0;7m^G(B[m Help[34;17H(B[0;7m^O(B[m Write Out    (B[0;7m^W(B[m Where Is     (B[0;7m^K(B[m Cut[34;65H(B[0;7m^T(B[m Execute[81G(B[0;7m^C(B[m Location     (B[0;7mM-U(B[m Undo[34;113H(B[0;7mM-A(B[m Set Mark    (B[0;7mM-](B[m To Bracket[35d(B[0;7m^X(B[m Exit[35;17H(B[0;7m^R(B[m Read File    (B[0;7m^\(B[m Replace[49G(B[0;7m^U(B[m Paste[35;65H(B[0;7m^J(B[m Justify[81G(B[0;7m^/(B[m Go To Line   (B[0;7mM-E(B[m Redo[35;113H(B[0;7mM-6(B[m Copy[35;129H(B[0;7m^Q(B[m Where Was[3d[36m# Please enter the commit message for your changes. Lines starting[4d# with '#' will be ignored, and an empty message aborts the commit.[5d#[6d# On branch main[7d# Your branch is up to date with 'origin/main'.[8d#[9d# Changes to be committed:[10d#[38;5;208m       [36mmodified:   README.md[11d#[2d[39m(B[m[?12l[?25h[?25l[?12l[?25h[?25l[1;101H(B[0;7m*[147G(B[m[2;32r[32;1H
+[1;35r[2;1H[?12l[?25h[?25l[?12l[?25h Please enter the commit message for your changes. Lines starting[K[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[33d[K[?12l[?25h[2d[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25hrting[K[?25l[?12l[?25hting[K[?25l[?12l[?25hing[K[?25l[?12l[?25hng[K[?25l[?12l[?25hg[K[?25l[?12l[?25h[K[?25l[2;33r[33;1H
+[1;35r[2;1H[?12l[?25h[?25l[?12l[?25h with '#' will be ignored, and an empty message aborts the commit.[K[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[36m#' will be ignored, and an empty message aborts the commit.[39m(B[m[K[?25l[?12l[?25h' will be ignored, and an empty message aborts the commit.[K[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25hmmit.[K[?25l[?12l[?25hmit.[K[?25l[?12l[?25hit.[K[?25l[?12l[?25ht.[K[?25l[?12l[?25h.[K[?25l[?12l[?25h[K[?25l[2;33r[33;1H
+[1;35r[2;1H[?12l[?25h[?25l[?12l[?25h[K[?25l[2;33r[33;1H
+[1;35r[2;1H[?12l[?25h[?25l[?12l[?25h On branch main[K[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h main[K[?25l[?12l[?25hmain[K[?25l[?12l[?25hain[K[?25l[?12l[?25hin[K[?25l[?12l[?25hn[K[?25l[?12l[?25h[K[?25l[2;33r[33;1H
+[1;35r[2;1H[?12l[?25h[?25l[?12l[?25h Your branch is up to date with 'origin/main'.[K[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25hain'.[K[?25l[?12l[?25hin'.[K[?25l[?12l[?25hn'.[K[?25l[?12l[?25h'.[K[?25l[?12l[?25h.[K[?25l[?12l[?25h[K[?25l[2;33r[33;1H
+[1;35r[2;1H[?12l[?25h[?25l[?12l[?25h[K[?25l[2;33r[33;1H
+[1;35r[2;1H[?12l[?25h[?25l[?12l[?25h Changes to be committed:[K[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25htted:[K[?25l[?12l[?25hted:[K[?25l[?12l[?25hed:[K[?25l[?12l[?25hd:[K[?25l[?12l[?25h:[K[?25l[?12l[?25h[K[?25l[2;33r[33;1H
+[1;35r[2;1H[?12l[?25h[?25l[?12l[?25h[8G[38;5;208m[1K [39m(B[mmodified:   README.md[?25l[?12l[?25h[8P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25hME.md[K[?25l[?12l[?25hE.md[K[?25l[?12l[?25h.md[K[?25l[?12l[?25hmd[K[?25l[?12l[?25hd[K[?25l[?12l[?25h[K[?25l[2;33r[33;1H
+[1;35r[2;1H[?12l[?25h[?25l[?12l[?25h[K[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25hE[?25l[?12l[?25hd[?25l[?12l[?25hi[?25l[?12l[?25ht[?25l[?12l[?25he[?25l[?12l[?25hd[?25l[?12l[?25h [?25l[?12l[?25hR[?25l[?12l[?25hE[?25l[?12l[?25hA[?25l[?12l[?25hD[?25l[?12l[?25hM[?25l[?12l[?25hE[?25l[3d[?12l[?25h[?25l[4d[?12l[?25h[?25l[33d(B[0;7mSave modified buffer?                                                                                                                               [34;1H Y(B[m Yes[K[35d(B[0;7m N(B[m No  [35;18H(B[0;7mC(B[m Cancel[K[33;23H[?12l[?25h[?25l[34d(B[0;7m^G(B[m Help[34;38H(B[0;7mM-D(B[m DOS Format[34;75H(B[0;7mM-A(B[m Append[34;112H(B[0;7mM-B(B[m Backup File[35d(B[0;7m^C(B[m Cancel[17G         [35;38H(B[0;7mM-M(B[m Mac Format[35;75H(B[0;7mM-P(B[m Prepend[35;112H(B[0;7m^T(B[m Browse[33d(B[0;7mFile Name to Write: /home/badhri/mle-training/.git/COMMIT_EDITMSG(B[m[?12l[?25h[?25l [1K (B[0;7m[ Writing... ](B[m[K[1;101H(B[0;7m [147G(B[m[33;66H(B[0;7m[ Wrote 3 lines ](B[m[J[35d[?12l[?25h[35;1H[?1049l[23;0;0t[?1l>[?2004l[K[main 102a12b] Edited README
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[?2004h(base) ]0;badhri@TIGER01766: ~/mle-training[01;32mbadhri@TIGER01766[00m:[01;34m~/mle-training[00m$ [K(base) ]0;badhri@TIGER01766: ~/mle-training[01;32mbadhri@TIGER01766[00m:[01;34m~/mle-training[00m$ git status
+[?2004lOn branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+[?2004h(base) ]0;badhri@TIGER01766: ~/mle-training[01;32mbadhri@TIGER01766[00m:[01;34m~/mle-training[00m$ rm README.md
+[?2004l[?2004h(base) ]0;badhri@TIGER01766: ~/mle-training[01;32mbadhri@TIGER01766[00m:[01;34m~/mle-training[00m$ git status
+[?2004lOn branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	[31mdeleted:    README.md[m
+
+no changes added to commit (use "git add" and/or "git commit -a")
+[?2004h(base) ]0;badhri@TIGER01766: ~/mle-training[01;32mbadhri@TIGER01766[00m:[01;34m~/mle-training[00m$ git statusrm README.md[1@g[1@i[1@t[1@ 
+[?2004lrm 'README.md'
+[?2004h(base) ]0;badhri@TIGER01766: ~/mle-training[01;32mbadhri@TIGER01766[00m:[01;34m~/mle-training[00m$ git rm README.md[6Pstatus
+[?2004lOn branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	[32mdeleted:    README.md[m
+
+[?2004h(base) ]0;badhri@TIGER01766: ~/mle-training[01;32mbadhri@TIGER01766[00m:[01;34m~/mle-training[00m$ git statusrm README.md[C README.md- README.md- README.mdc README.mda README.mdc README.mdh README.mde README.mdd README.md
+[?2004lfatal: pathspec 'README.md' did not match any files
+[?2004h(base) ]0;badhri@TIGER01766: ~/mle-training[01;32mbadhri@TIGER01766[00m:[01;34m~/mle-training[00m$ git commit
+[?2004lhint: Waiting for your editor to close the file... [?2004h[?1049h[22;0;0t[1;10r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[8;57H(B[0;7m[ Reading... ](B[m[8;56H(B[0;7m[ Read 11 lines ](B[m[H(B[0;7m  GNU nano 6.2                             /home/badhri/mle-training/.git/COMMIT_EDITMSG                                       [1;126H(B[m[9d(B[0;7m^G(B[m Help[9;16H(B[0;7m^O(B[m Write Out   (B[0;7m^W(B[m Where Is    (B[0;7m^K(B[m Cut[9;61H(B[0;7m^T(B[m Execute     (B[0;7m^C(B[m Location    (B[0;7mM-U(B[m Undo[106G(B[0;7mM-A(B[m Set Mark[10d(B[0;7m^X(B[m Exit[10;16H(B[0;7m^R(B[m Read File   (B[0;7m^\(B[m Replace     (B[0;7m^U(B[m Paste[61G(B[0;7m^J(B[m Justify     (B[0;7m^/(B[m Go To Line  (B[0;7mM-E(B[m Redo[106G(B[0;7mM-6(B[m Copy[3d[36m# Please enter the commit message for your changes. Lines starting[4d# with '#' will be ignored, and an empty message aborts the commit.[5d#[6d# On branch main[7d# Your branch is ahead of 'origin/main' by 1 commit.[2d[39m(B[m[?12l[?25h[?25l[8d[J[10d[?12l[?25h[10;1H[?1049l[23;0;0t[?1l>[?2004l[KAborting commit due to empty commit message.
+[?2004h(base) ]0;badhri@TIGER01766: ~/mle-training[01;32mbadhri@TIGER01766[00m:[01;34m~/mle-training[00m$ git commit -m "GIT tutorial"
+[?2004l[main 07f7e94] GIT tutorial
+ 1 file changed, 1 deletion(-)
+ delete mode 100644 README.md
+[?2004h(base) ]0;badhri@TIGER01766: ~/mle-training[01;32mbadhri@TIGER01766[00m:[01;34m~/mle-training[00m$ git status
+[?2004lOn branch main
+Your branch is ahead of 'origin/main' by 2 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+[?2004h(base) ]0;badhri@TIGER01766: ~/mle-training[01;32mbadhri@TIGER01766[00m:[01;34m~/mle-training[00m$ git log
+[?2004l[?1h=[33mcommit 07f7e94350a1fd5a17af31774148bacc14c9c613[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m[m
+Author: Badhri-Naraayanan-Srinivasan <badhri.srinivasa@tigeranalytics.com>[m
+Date:   Tue May 2 13:18:41 2023 +0530[m
+[m
+    GIT tutorial[m
+[m
+[33mcommit 102a12b463d53d7b0c4091778a2b6f88e7885285[m[m
+Author: Badhri-Naraayanan-Srinivasan <badhri.srinivasa@tigeranalytics.com>[m
+Date:   Tue May 2 13:15:36 2023 +0530[m
+:[K[K[m
+:[K[K [K^X^X[K^J^J[K:[K[H[2J[HAuthor: Badhri-Naraayanan-Srinivasan <badhri.srinivasa@tigeranalytics.com>[m
+Date:   Tue May 2 13:18:41 2023 +0530[m
+[m
+    GIT tutorial[m
+[m
+[33mcommit 102a12b463d53d7b0c4091778a2b6f88e7885285[m[m
+Author: Badhri-Naraayanan-Srinivasan <badhri.srinivasa@tigeranalytics.com>[m
+Date:   Tue May 2 13:15:36 2023 +0530[m
+[m
+:[K[K[HM[33mcommit 07f7e94350a1fd5a17af31774148bacc14c9c613[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m[m
+[10;1H[K:[K[K:[K[K[7mNo next tag  (press RETURN)[27m[10;1H[K[K:[K[K-[Klog file: [Ktt[Kaa[Ktt[Kuu[Kss[K[K:[K[K:[K[K[m
+:[K[K    Edited README[m
+:[K[K[m
+:[K[K[33mcommit 488a603696840b0c416c14a92ce02d5b0f92e175[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m[m
+:[K[KAuthor: Badhri Naraayanan Srinivasan <59823932+Badhri-Naraayanan-Srinivasan@users.noreply.github.com>[m
+:[K[KDate:   Mon May 1 12:49:27 2023 +0530[m
+:[K[K[m
+:[K[K    Initial commit[m
+:[K[K[K[7m(END)[27m[K[K[K[7m(END)[27m[K[K[K[7m(END)[27m[K[K[K[7m(END)[27m[K[K[K[7m(END)[27m[K[K[K[7m(END)[27m[K[K[K[7m(END)[27m[K[K[K[7m(END)[27m[K[K[K[7m(END)[27m[K[K[K[7m(END)[27m[K[K[K[7m(END)[27m[K[K[K[7m(END)[27m[K[K[K[7m(END)[27m[K[K[K[7m(END)[27m[K[K[K[7m(END)[27m[K[K[K[7m(END)[27m[K[K[K[7m(END)[27m[K[K[K[7m(END)[27m[K[K [KESCESC[KOO[KCC[H[2J[H[m
+[m
+[m
+[m
+[33m[m[33m[m[1;31m[m[33m[m[1;31mrigin/HEAD[m[33m)[m[m
+n-Srinivasan@users.noreply.github.com>[m
+[m
+[m
+[m
+[7m(END)[27m[K[K[K[7m(END)[27m[K[H[2J[H[m
+[m
+[m
+[m
+[33m[m[33m[m[1;31m[m[33m[m[1;31mrigin/HEAD[m[33m)[m[m
+n-Srinivasan@users.noreply.github.com>[m
+[m
+[m
+[m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[7m(END)[27m[K[K[K[7m(END)[27m[K[K[K[7m(END)[27m[K[K [K^X^X[H[2J[H[m
+[m
+[m
+[m
+[33m[m[33m[m[1;31m[m[33m[m[1;31mrigin/HEAD[m[33m)[m[m
+n-Srinivasan@users.noreply.github.com>[m
+[m
+[m
+[m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[7m(END)[27m[K[H[2J[H[m
+[m
+[m
+[m
+[33m[m[33m[m[1;31m[m[33m[m[1;31mrigin/HEAD[m[33m)[m[m
+n-Srinivasan@users.noreply.github.com>[m
+[m
+[m
+[m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[7m(END)[27m[K[H[2J[H[m
+[m
+[m
+[m
+[33m[m[33m[m[1;31m[m[33m[m[1;31mrigin/HEAD[m[33m)[m[m
+n-Srinivasan@users.noreply.github.com>[m
+[m
+[m
+[m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[7m(END)[27m[K[K[?1l>
+[1]+  Stopped                 git log
+[?2004h(base) ]0;badhri@TIGER01766: ~/mle-training[01;32mbadhri@TIGER01766[00m:[01;34m~/mle-training[00m$ [K(base) ]0;badhri@TIGER01766: ~/mle-training[01;32mbadhri@TIGER01766[00m:[01;34m~/mle-training[00m$ git log --stat
+[?2004l[?1h=[33mcommit 07f7e94350a1fd5a17af31774148bacc14c9c613[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m[m
+Author: Badhri-Naraayanan-Srinivasan <badhri.srinivasa@tigeranalytics.com>[m
+Date:   Tue May 2 13:18:41 2023 +0530[m
+[m
+    GIT tutorial[m
+[m
+ README.md | 1 [31m-[m[m
+ 1 file changed, 1 deletion(-)[m
+[m
+:[K[K[?1l>
+[2]+  Stopped                 git log --stat
+[?2004h(base) ]0;badhri@TIGER01766: ~/mle-training[01;32mbadhri@TIGER01766[00m:[01;34m~/mle-training[00m$ git log --stat[K[K[K[Kpretty=oneline
+[?2004l[?1h=[33m07f7e94350a1fd5a17af31774148bacc14c9c613[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m GIT tutorial[m
+[33m102a12b463d53d7b0c4091778a2b6f88e7885285[m Edited README[m
+[33m488a603696840b0c416c14a92ce02d5b0f92e175[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m Initial commit[m
+[K[?1l>[?2004h(base) ]0;badhri@TIGER01766: ~/mle-training[01;32mbadhri@TIGER01766[00m:[01;34m~/mle-training[00m$ git log --pretty=oneline[K[K[K[K[K[K[Kformat:%h-%an,%ar:%s""%h-%an,%ar:%s"
+[?2004l[?1h=07f7e94-Badhri-Naraayanan-Srinivasan,2 minutes ago:GIT tutorial[m
+102a12b-Badhri-Naraayanan-Srinivasan,5 minutes ago:Edited README[m
+488a603-Badhri Naraayanan Srinivasan,25 hours ago:Initial commit[m
+[K[?1l>[?2004h(base) ]0;badhri@TIGER01766: ~/mle-training[01;32mbadhri@TIGER01766[00m:[01;34m~/mle-training[00m$ git log --pretty=format:"%h-%an,%ar:%s"[C[C[1P%s"[1P%s"[1P%s"[1Ps"[1P%s"[1P%s"[1P%s"[1Ps"[1P%s" %s"[C[C[C --graph
+[?2004l[?1h=* 07f7e94 GIT tutorial[m
+* 102a12b Edited README[m
+* 488a603 Initial commit[m
+[K[?1l>[?2004h(base) ]0;badhri@TIGER01766: ~/mle-training[01;32mbadhri@TIGER01766[00m:[01;34m~/mle-training[00m$ [7mgit commit --amend[27mgit commit --amend
+[?2004lhint: Waiting for your editor to close the file... [?2004h[?1049h[22;0;0t[1;10r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[8;57H(B[0;7m[ Reading... ](B[m[8;56H(B[0;7m[ Read 17 lines ](B[m[H(B[0;7m  GNU nano 6.2                             /home/badhri/mle-training/.git/COMMIT_EDITMSG                                       [1;126H(B[m[9d(B[0;7m^G(B[m Help[9;16H(B[0;7m^O(B[m Write Out   (B[0;7m^W(B[m Where Is    (B[0;7m^K(B[m Cut[9;61H(B[0;7m^T(B[m Execute     (B[0;7m^C(B[m Location    (B[0;7mM-U(B[m Undo[106G(B[0;7mM-A(B[m Set Mark[10d(B[0;7m^X(B[m Exit[10;16H(B[0;7m^R(B[m Read File   (B[0;7m^\(B[m Replace     (B[0;7m^U(B[m Paste[61G(B[0;7m^J(B[m Justify     (B[0;7m^/(B[m Go To Line  (B[0;7mM-E(B[m Redo[106G(B[0;7mM-6(B[m Copy[2dGIT tutorial[4d[36m# Please enter the commit message for your changes. Lines starting[5d# with '#' will be ignored, and an empty message aborts the commit.[6d#[7d# Date:      Tue May 2 13:18:41 2023 +0530[2d[39m(B[m[?12l[?25h[?25l[8d[J[10d[?12l[?25h[10;1H[?1049l[23;0;0t[?1l>[?2004l[K[main a36d48f] GIT tutorial
+ Date: Tue May 2 13:18:41 2023 +0530
+ 1 file changed, 1 deletion(-)
+ delete mode 100644 README.md
+[?2004h(base) ]0;badhri@TIGER01766: ~/mle-training[01;32mbadhri@TIGER01766[00m:[01;34m~/mle-training[00m$ git commit -m 'Initiak commit'
+[?2004lOn branch main
+Your branch is ahead of 'origin/main' by 2 commits.
+  (use "git push" to publish your local commits)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	[31mtatus[m
+
+nothing added to commit but untracked files present (use "git add" to track)
+[?2004h(base) ]0;badhri@TIGER01766: ~/mle-training[01;32mbadhri@TIGER01766[00m:[01;34m~/mle-training[00m$ git add forgotten_file
+[?2004lfatal: pathspec 'forgotten_file' did not match any files
+[?2004h(base) ]0;badhri@TIGER01766: ~/mle-training[01;32mbadhri@TIGER01766[00m:[01;34m~/mle-training[00m$ git add forgotten_filecommit -m 'Initiak commit'[12P-amend
+[?2004lhint: Waiting for your editor to close the file... [?2004h[?1049h[22;0;0t[1;10r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[8;57H(B[0;7m[ Reading... ](B[m[8;56H(B[0;7m[ Read 17 lines ](B[m[H(B[0;7m  GNU nano 6.2                             /home/badhri/mle-training/.git/COMMIT_EDITMSG                                       [1;126H(B[m[9d(B[0;7m^G(B[m Help[9;16H(B[0;7m^O(B[m Write Out   (B[0;7m^W(B[m Where Is    (B[0;7m^K(B[m Cut[9;61H(B[0;7m^T(B[m Execute     (B[0;7m^C(B[m Location    (B[0;7mM-U(B[m Undo[106G(B[0;7mM-A(B[m Set Mark[10d(B[0;7m^X(B[m Exit[10;16H(B[0;7m^R(B[m Read File   (B[0;7m^\(B[m Replace     (B[0;7m^U(B[m Paste[61G(B[0;7m^J(B[m Justify     (B[0;7m^/(B[m Go To Line  (B[0;7mM-E(B[m Redo[106G(B[0;7mM-6(B[m Copy[2dGIT tutorial[4d[36m# Please enter the commit message for your changes. Lines starting[5d# with '#' will be ignored, and an empty message aborts the commit.[6d#[7d# Date:      Tue May 2 13:18:41 2023 +0530[2d[39m(B[m[?12l[?25h[?25l[8d[J[10d[?12l[?25h[10;1H[?1049l[23;0;0t[?1l>[?2004l[K[main 309af47] GIT tutorial
+ Date: Tue May 2 13:18:41 2023 +0530
+ 1 file changed, 1 deletion(-)
+ delete mode 100644 README.md
+[?2004h(base) ]0;badhri@TIGER01766: ~/mle-training[01;32mbadhri@TIGER01766[00m:[01;34m~/mle-training[00m$ git add *
+[?2004l[?2004h(base) ]0;badhri@TIGER01766: ~/mle-training[01;32mbadhri@TIGER01766[00m:[01;34m~/mle-training[00m$ git status
+[?2004lOn branch main
+Your branch is ahead of 'origin/main' by 2 commits.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	[32mnew file:   tatus[m
+
+[?2004h(base) ]0;badhri@TIGER01766: ~/mle-training[01;32mbadhri@TIGER01766[00m:[01;34m~/mle-training[00m$ git restore README.md
+[?2004lerror: pathspec 'README.md' did not match any file(s) known to git
+[?2004h(base) ]0;badhri@TIGER01766: ~/mle-training[01;32mbadhri@TIGER01766[00m:[01;34m~/mle-training[00m$ git remote add[Kd mle [7mhttps://github.com/Badhri-Naraayanan-Srinivasan/mle-training.git[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Chttps://github.com/Badhri-Naraayanan-Srinivasan/mle-training.git
+[?2004l[?2004h(base) ]0;badhri@TIGER01766: ~/mle-training[01;32mbadhri@TIGER01766[00m:[01;34m~/mle-training[00m$ git fetch mle
+[?2004lFrom https://github.com/Badhri-Naraayanan-Srinivasan/mle-training
+ * [new branch]      enh/#1/Assignment1.2 -> mle/enh/#1/Assignment1.2
+ * [new branch]      main                 -> mle/main
+[?2004h(base) ]0;badhri@TIGER01766: ~/mle-training[01;32mbadhri@TIGER01766[00m:[01;34m~/mle-training[00m$ [7mgit remote show origin[27mgit remote show origin
+[?2004l* remote origin
+  Fetch URL: https://github.com/Badhri-Naraayanan-Srinivasan/mle-training.git
+  Push  URL: https://github.com/Badhri-Naraayanan-Srinivasan/mle-training.git
+  HEAD branch: main
+  Remote branches:
+    enh/#1/Assignment1.2 tracked
+    main                 tracked
+  Local branch configured for 'git pull':
+    main merges with remote main
+  Local ref configured for 'git push':
+    main pushes to main (fast-forwardable)
+[?2004h(base) ]0;badhri@TIGER01766: ~/mle-training[01;32mbadhri@TIGER01766[00m:[01;34m~/mle-training[00m$ git remote rename mle ml
+[?2004l[?2004h(base) ]0;badhri@TIGER01766: ~/mle-training[01;32mbadhri@TIGER01766[00m:[01;34m~/mle-training[00m$ git remote rename mle mle[1P mle
+[?2004l[?2004h(base) ]0;badhri@TIGER01766: ~/mle-training[01;32mbadhri@TIGER01766[00m:[01;34m~/mle-training[00m$ git remote
+[?2004lmle
+origin
+[?2004h(base) ]0;badhri@TIGER01766: ~/mle-training[01;32mbadhri@TIGER01766[00m:[01;34m~/mle-training[00m$ git remote rename ml mle[K remove mle
+[?2004l[?2004h(base) ]0;badhri@TIGER01766: ~/mle-training[01;32mbadhri@TIGER01766[00m:[01;34m~/mle-training[00m$ git remote remove mle[K
+[?2004lorigin
+[?2004h(base) ]0;badhri@TIGER01766: ~/mle-training[01;32mbadhri@TIGER01766[00m:[01;34m~/mle-training[00m$ git tag
+[?2004l[?1h=[K[?1l>[?2004h(base) ]0;badhri@TIGER01766: ~/mle-training[01;32mbadhri@TIGER01766[00m:[01;34m~/mle-training[00m$ git branch testing
+[?2004l[?2004h(base) ]0;badhri@TIGER01766: ~/mle-training[01;32mbadhri@TIGER01766[00m:[01;34m~/mle-training[00m$ git checkout testing
+[?2004lA	tatus
+Switched to branch 'testing'
+[?2004h(base) ]0;badhri@TIGER01766: ~/mle-training[01;32mbadhri@TIGER01766[00m:[01;34m~/mle-training[00m$ git commit -s -m 'made a achenbge[K[K[K[K[K[K[K[Kchange'
+[?2004l[testing 7c84d61] made a change
+ 1 file changed, 17 insertions(+)
+ create mode 100644 tatus
+[?2004h(base) ]0;badhri@TIGER01766: ~/mle-training[01;32mbadhri@TIGER01766[00m:[01;34m~/mle-training[00m$ git checkout master
+[?2004lerror: pathspec 'master' did not match any file(s) known to git
+[?2004h(base) ]0;badhri@TIGER01766: ~/mle-training[01;32mbadhri@TIGER01766[00m:[01;34m~/mle-training[00m$ [7mgit log --oneline --decorate --graph --all[27mgit log --oneline --decorate --graph --all
+[?2004l[?1h=* [33m7c84d61[m[33m ([m[1;36mHEAD -> [m[1;32mtesting[m[33m)[m made a change[m
+* [33m309af47[m[33m ([m[1;32mmain[m[33m)[m GIT tutorial[m
+* [33m102a12b[m Edited README[m
+[31m|[m * [33m7d792a3[m[33m ([m[1;31morigin/enh/#1/Assignment1.2[m[33m)[m Create requirements.txt[m
+[31m|[m * [33mfbb8a73[m Create env.yml[m
+[31m|[m * [33mb005a50[m Update README.md[m
+[31m|[m * [33m981a95b[m Update .gitignore[m
+[31m|[m * [33mad0b45a[m Upload nonstandardcode.py and README-Assignment1.2[m
+[31m|[m[31m/[m  [m
+:[K[K[?1l>
+[3]+  Stopped                 git log --oneline --decorate --graph --all
+[?2004h(base) ]0;badhri@TIGER01766: ~/mle-training[01;32mbadhri@TIGER01766[00m:[01;34m~/mle-training[00m$ cd ~/.ssh
+[?2004lbash: cd: /home/badhri/.ssh: No such file or directory
+[?2004h(base) ]0;badhri@TIGER01766: ~/mle-training[01;32mbadhri@TIGER01766[00m:[01;34m~/mle-training[00m$ exit
+[?2004lexit
+There are stopped jobs.
+[?2004h(base) ]0;badhri@TIGER01766: ~/mle-training[01;32mbadhri@TIGER01766[00m:[01;34m~/mle-training[00m$ ls
+[?2004ltatus
+[?2004h(base) ]0;badhri@TIGER01766: ~/mle-training[01;32mbadhri@TIGER01766[00m:[01;34m~/mle-training[00m$ cd ..
+[?2004l[?2004h(base) ]0;badhri@TIGER01766: ~[01;32mbadhri@TIGER01766[00m:[01;34m~[00m$ ls
+[?2004l[0m[01;34mminiconda3[0m  [01;34mmle-training[0m  my_git_session  my_miniconda_session
+[?2004h(base) ]0;badhri@TIGER01766: ~[01;32mbadhri@TIGER01766[00m:[01;34m~[00m$ [7mscript -a ~/my_unix_session[27mscript -a ~/my_unix_session
+[?2004lScript started, output log file is '/home/badhri/my_unix_session'.
+[?2004h(base) ]0;badhri@TIGER01766: ~[01;32mbadhri@TIGER01766[00m:[01;34m~[00m$ ls
+[?2004l[0m[01;34mminiconda3[0m  [01;34mmle-training[0m  my_git_session  my_miniconda_session  my_unix_session  [01;34mshell-lesson-data[0m
+[?2004h(base) ]0;badhri@TIGER01766: ~[01;32mbadhri@TIGER01766[00m:[01;34m~[00m$ ks
+[?2004lks: command not found
+[?2004h(base) ]0;badhri@TIGER01766: ~[01;32mbadhri@TIGER01766[00m:[01;34m~[00m$ pwd
+[?2004l/home/badhri
+[?2004h(base) ]0;badhri@TIGER01766: ~[01;32mbadhri@TIGER01766[00m:[01;34m~[00m$ ld
+[?2004lld: no input files
+[?2004h(base) ]0;badhri@TIGER01766: ~[01;32mbadhri@TIGER01766[00m:[01;34m~[00m$ ls
+[?2004l[0m[01;34mminiconda3[0m  [01;34mmle-training[0m  my_git_session  my_miniconda_session  my_unix_session  [01;34mshell-lesson-data[0m
+[?2004h(base) ]0;badhri@TIGER01766: ~[01;32mbadhri@TIGER01766[00m:[01;34m~[00m$ ls -F
+[?2004l[0m[01;34mminiconda3[0m/  [01;34mmle-training[0m/  my_git_session  my_miniconda_session  my_unix_session  [01;34mshell-lesson-data[0m/
+[?2004h(base) ]0;badhri@TIGER01766: ~[01;32mbadhri@TIGER01766[00m:[01;34m~[00m$ clear
+[?2004l[H[2J[3J[?2004h(base) ]0;badhri@TIGER01766: ~[01;32mbadhri@TIGER01766[00m:[01;34m~[00m$ ls --help
+[?2004lUsage: ls [OPTION]... [FILE]...
+List information about the FILEs (the current directory by default).
+Sort entries alphabetically if none of -cftuvSUX nor --sort is specified.
+
+Mandatory arguments to long options are mandatory for short options too.
+  -a, --all                  do not ignore entries starting with .
+  -A, --almost-all           do not list implied . and ..
+      --author               with -l, print the author of each file
+  -b, --escape               print C-style escapes for nongraphic characters
+      --block-size=SIZE      with -l, scale sizes by SIZE when printing them;
+                               e.g., '--block-size=M'; see SIZE format below
+  -B, --ignore-backups       do not list implied entries ending with ~
+  -c                         with -lt: sort by, and show, ctime (time of last
+                               modification of file status information);
+                               with -l: show ctime and sort by name;
+                               otherwise: sort by ctime, newest first
+  -C                         list entries by columns
+      --color[=WHEN]         colorize the output; WHEN can be 'always' (default
+                               if omitted), 'auto', or 'never'; more info below
+  -d, --directory            list directories themselves, not their contents
+  -D, --dired                generate output designed for Emacs' dired mode
+  -f                         do not sort, enable -aU, disable -ls --color
+  -F, --classify             append indicator (one of */=>@|) to entries
+      --file-type            likewise, except do not append '*'
+      --format=WORD          across -x, commas -m, horizontal -x, long -l,
+                               single-column -1, verbose -l, vertical -C
+      --full-time            like -l --time-style=full-iso
+  -g                         like -l, but do not list owner
+      --group-directories-first
+                             group directories before files;
+                               can be augmented with a --sort option, but any
+                               use of --sort=none (-U) disables grouping
+  -G, --no-group             in a long listing, don't print group names
+  -h, --human-readable       with -l and -s, print sizes like 1K 234M 2G etc.
+      --si                   likewise, but use powers of 1000 not 1024
+  -H, --dereference-command-line
+                             follow symbolic links listed on the command line
+      --dereference-command-line-symlink-to-dir
+                             follow each command line symbolic link
+                               that points to a directory
+      --hide=PATTERN         do not list implied entries matching shell PATTERN
+                               (overridden by -a or -A)
+      --hyperlink[=WHEN]     hyperlink file names; WHEN can be 'always'
+                               (default if omitted), 'auto', or 'never'
+      --indicator-style=WORD  append indicator with style WORD to entry names:
+                               none (default), slash (-p),
+                               file-type (--file-type), classify (-F)
+  -i, --inode                print the index number of each file
+  -I, --ignore=PATTERN       do not list implied entries matching shell PATTERN
+  -k, --kibibytes            default to 1024-byte blocks for disk usage;
+                               used only with -s and per directory totals
+  -l                         use a long listing format
+  -L, --dereference          when showing file information for a symbolic
+                               link, show information for the file the link
+                               references rather than for the link itself
+  -m                         fill width with a comma separated list of entries
+  -n, --numeric-uid-gid      like -l, but list numeric user and group IDs
+  -N, --literal              print entry names without quoting
+  -o                         like -l, but do not list group information
+  -p, --indicator-style=slash
+                             append / indicator to directories
+  -q, --hide-control-chars   print ? instead of nongraphic characters
+      --show-control-chars   show nongraphic characters as-is (the default,
+                               unless program is 'ls' and output is a terminal)
+  -Q, --quote-name           enclose entry names in double quotes
+      --quoting-style=WORD   use quoting style WORD for entry names:
+                               literal, locale, shell, shell-always,
+                               shell-escape, shell-escape-always, c, escape
+                               (overrides QUOTING_STYLE environment variable)
+  -r, --reverse              reverse order while sorting
+  -R, --recursive            list subdirectories recursively
+  -s, --size                 print the allocated size of each file, in blocks
+  -S                         sort by file size, largest first
+      --sort=WORD            sort by WORD instead of name: none (-U), size (-S),
+                               time (-t), version (-v), extension (-X)
+      --time=WORD            change the default of using modification times;
+                               access time (-u): atime, access, use;
+                               change time (-c): ctime, status;
+                               birth time: birth, creation;
+                             with -l, WORD determines which time to show;
+                             with --sort=time, sort by WORD (newest first)
+      --time-style=TIME_STYLE  time/date format with -l; see TIME_STYLE below
+  -t                         sort by time, newest first; see --time
+  -T, --tabsize=COLS         assume tab stops at each COLS instead of 8
+  -u                         with -lt: sort by, and show, access time;
+                               with -l: show access time and sort by name;
+                               otherwise: sort by access time, newest first
+  -U                         do not sort; list entries in directory order
+  -v                         natural sort of (version) numbers within text
+  -w, --width=COLS           set output width to COLS.  0 means no limit
+  -x                         list entries by lines instead of by columns
+  -X                         sort alphabetically by entry extension
+  -Z, --context              print any security context of each file
+  -1                         list one file per line.  Avoid '\n' with -q or -b
+      --help     display this help and exit
+      --version  output version information and exit
+
+The SIZE argument is an integer and optional unit (example: 10K is 10*1024).
+Units are K,M,G,T,P,E,Z,Y (powers of 1024) or KB,MB,... (powers of 1000).
+Binary prefixes can be used, too: KiB=K, MiB=M, and so on.
+
+The TIME_STYLE argument can be full-iso, long-iso, iso, locale, or +FORMAT.
+FORMAT is interpreted like in date(1).  If FORMAT is FORMAT1<newline>FORMAT2,
+then FORMAT1 applies to non-recent files and FORMAT2 to recent files.
+TIME_STYLE prefixed with 'posix-' takes effect only outside the POSIX locale.
+Also the TIME_STYLE environment variable sets the default style to use.
+
+Using color to distinguish file types is disabled both by default and
+with --color=never.  With --color=auto, ls emits color codes only when
+standard output is connected to a terminal.  The LS_COLORS environment
+variable can change the settings.  Use the dircolors command to set it.
+
+Exit status:
+ 0  if OK,
+ 1  if minor problems (e.g., cannot access subdirectory),
+ 2  if serious trouble (e.g., cannot access command-line argument).
+
+GNU coreutils online help: <https://www.gnu.org/software/coreutils/>
+Report any translation bugs to <https://translationproject.org/team/>
+Full documentation <https://www.gnu.org/software/coreutils/ls>
+or available locally via: info '(coreutils) ls invocation'
+[?2004h(base) ]0;badhri@TIGER01766: ~[01;32mbadhri@TIGER01766[00m:[01;34m~[00m$ man ls
+[?2004l[?1049h[22;0;0t[?1h=LS(1)                                                  User Commands                                                  LS(1)[m
+[m
+[1mNAME[0m[m
+       ls - list directory contents[m
+[m
+[1mSYNOPSIS[0m[m
+       [1mls[0m [[4mOPTION[24m]... [[4mFILE[24m]...[m
+[m
+[1mDESCRIPTION[0m[m
+[7m Manual page ls(1) line 1 (press h for help or q to quit)[27m[K...skipping...
+LS(1)                                                  User Commands                                                  LS(1)[m
+[m
+[1mNAME[0m[m
+       ls - list directory contents[m
+[m
+[1mSYNOPSIS[0m[m
+       [1mls[0m [[4mOPTION[24m]... [[4mFILE[24m]...[m
+[m
+[1mDESCRIPTION[0m[m
+       List  information about the FILEs (the current directory by default).  Sort entries alphabetically if none of [1m-cftu‐[0m[m
+       [1mvSUX[0m nor [1m--sort[0m is specified.[m
+[m
+       Mandatory arguments to long options are mandatory for short options too.[m
+[m
+       [1m-a[0m, [1m--all[0m[m
+              do not ignore entries starting with .[m
+[m
+       [1m-A[0m, [1m--almost-all[0m[m
+              do not list implied . and ..[m
+[m
+       [1m--author[0m[m
+              with [1m-l[0m, print the author of each file[m
+[m
+       [1m-b[0m, [1m--escape[0m[m
+              print C-style escapes for nongraphic characters[m
+[m
+       [1m--block-size[0m=[4mSIZE[24m[m
+              with [1m-l[0m, scale sizes by SIZE when printing them; e.g., '--block-size=M'; see SIZE format below[m
+[m
+       [1m-B[0m, [1m--ignore-backups[0m[m
+              do not list implied entries ending with ~[m
+[m
+       [1m-c[0m     with [1m-lt[0m: sort by, and show, ctime (time of last modification of file  status  information);  with  [1m-l[0m:  show[m
+              ctime and sort by name; otherwise: sort by ctime, newest first[m
+[7m Manual page ls(1) line 1 (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0t[?2004h(base) ]0;badhri@TIGER01766: ~[01;32mbadhri@TIGER01766[00m:[01;34m~[00m$ [K(base) ]0;badhri@TIGER01766: ~[01;32mbadhri@TIGER01766[00m:[01;34m~[00m$ [K(base) ]0;badhri@TIGER01766: ~[01;32mbadhri@TIGER01766[00m:[01;34m~[00m$ [K(base) ]0;badhri@TIGER01766: ~[01;32mbadhri@TIGER01766[00m:[01;34m~[00m$ [K(base) ]0;badhri@TIGER01766: ~[01;32mbadhri@TIGER01766[00m:[01;34m~[00m$ [K(base) ]0;badhri@TIGER01766: ~[01;32mbadhri@TIGER01766[00m:[01;34m~[00m$ [K(base) ]0;badhri@TIGER01766: ~[01;32mbadhri@TIGER01766[00m:[01;34m~[00m$ [K(base) ]0;badhri@TIGER01766: ~[01;32mbadhri@TIGER01766[00m:[01;34m~[00m$ [K(base) ]0;badhri@TIGER01766: ~[01;32mbadhri@TIGER01766[00m:[01;34m~[00m$ [K(base) ]0;badhri@TIGER01766: ~[01;32mbadhri@TIGER01766[00m:[01;34m~[00m$ [K(base) ]0;badhri@TIGER01766: ~[01;32mbadhri@TIGER01766[00m:[01;34m~[00m$ [K(base) ]0;badhri@TIGER01766: ~[01;32mbadhri@TIGER01766[00m:[01;34m~[00m$ [K(base) ]0;badhri@TIGER01766: ~[01;32mbadhri@TIGER01766[00m:[01;34m~[00m$ [K(base) ]0;badhri@TIGER01766: ~[01;32mbadhri@TIGER01766[00m:[01;34m~[00m$ [K(base) ]0;badhri@TIGER01766: ~[01;32mbadhri@TIGER01766[00m:[01;34m~[00m$ [K(base) ]0;badhri@TIGER01766: ~[01;32mbadhri@TIGER01766[00m:[01;34m~[00m$ [K(base) ]0;badhri@TIGER01766: ~[01;32mbadhri@TIGER01766[00m:[01;34m~[00m$ [K(base) ]0;badhri@TIGER01766: ~[01;32mbadhri@TIGER01766[00m:[01;34m~[00m$ [K(base) ]0;badhri@TIGER01766: ~[01;32mbadhri@TIGER01766[00m:[01;34m~[00m$ [K(base) ]0;badhri@TIGER01766: ~[01;32mbadhri@TIGER01766[00m:[01;34m~[00m$ ls -j
+[?2004lls: invalid option -- 'j'
+Try 'ls --help' for more information.
+[?2004h(base) ]0;badhri@TIGER01766: ~[01;32mbadhri@TIGER01766[00m:[01;34m~[00m$ ls -l -h
+[?2004ltotal 188K
+drwxr-xr-x 17 badhri badhri 4.0K May  2 12:04 [0m[01;34mminiconda3[0m
+drwxr-xr-x  3 badhri badhri 4.0K May  2 13:19 [01;34mmle-training[0m
+-rw-r--r--  1 badhri badhri  52K May  2 15:35 my_git_session
+-rw-r--r--  1 badhri badhri 105K May  2 12:54 my_miniconda_session
+-rw-r--r--  1 badhri badhri  12K May  2 15:35 my_unix_session
+drwxr-xr-x  4 root   root   4.0K May  2 15:31 [01;34mshell-lesson-data[0m
+[?2004h(base) ]0;badhri@TIGER01766: ~[01;32mbadhri@TIGER01766[00m:[01;34m~[00m$ ls -l -h[Kl[1P -lh -l
+[?2004ltotal 188K
+drwxr-xr-x 17 badhri badhri 4.0K May  2 12:04 [0m[01;34mminiconda3[0m
+drwxr-xr-x  3 badhri badhri 4.0K May  2 13:19 [01;34mmle-training[0m
+-rw-r--r--  1 badhri badhri  52K May  2 15:35 my_git_session
+-rw-r--r--  1 badhri badhri 105K May  2 12:54 my_miniconda_session
+-rw-r--r--  1 badhri badhri  12K May  2 15:35 my_unix_session
+drwxr-xr-x  4 root   root   4.0K May  2 15:31 [01;34mshell-lesson-data[0m
+[?2004h(base) ]0;badhri@TIGER01766: ~[01;32mbadhri@TIGER01766[00m:[01;34m~[00m$ ls -rt
+[?2004l[0m[01;34mminiconda3[0m  my_miniconda_session  [01;34mmle-training[0m  [01;34mshell-lesson-data[0m  my_git_session  my_unix_session
+[?2004h(base) ]0;badhri@TIGER01766: ~[01;32mbadhri@TIGER01766[00m:[01;34m~[00m$ ls -t
+[?2004lmy_unix_session  my_git_session  [0m[01;34mshell-lesson-data[0m  [01;34mmle-training[0m  my_miniconda_session  [01;34mminiconda3[0m
+[?2004h(base) ]0;badhri@TIGER01766: ~[01;32mbadhri@TIGER01766[00m:[01;34m~[00m$ ls -F shell-lesson-data/
+[?2004l[0m[01;34mexercise-data[0m/  [01;34mnorth-pacific-gyre[0m/
+[?2004h(base) ]0;badhri@TIGER01766: ~[01;32mbadhri@TIGER01766[00m:[01;34m~[00m$ cd shell-lesson-data/exercise-data/
+[?2004l[?2004h(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data[00m$ pwd
+[?2004l/home/badhri/shell-lesson-data/exercise-data
+[?2004h(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data[00m$ ls -F
+[?2004l[0m[01;34malkanes[0m/  [01;34manimal-counts[0m/  [01;34mcreatures[0m/  numbers.txt  numbers.txt:Zone.Identifier  [01;34mwriting[0m/
+[?2004h(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data[00m$ cd ..
+[?2004l[?2004h(base) ]0;badhri@TIGER01766: ~/shell-lesson-data[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data[00m$ pwd
+[?2004l/home/badhri/shell-lesson-data
+[?2004h(base) ]0;badhri@TIGER01766: ~/shell-lesson-data[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data[00m$ ls -F -a
+[?2004l[0m[01;34m.[0m/  [01;34m..[0m/  [01;34mexercise-data[0m/  [01;34mnorth-pacific-gyre[0m/
+[?2004h(base) ]0;badhri@TIGER01766: ~/shell-lesson-data[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data[00m$ cd
+[?2004l[?2004h(base) ]0;badhri@TIGER01766: ~[01;32mbadhri@TIGER01766[00m:[01;34m~[00m$ pwd
+[?2004l/home/badhri
+[?2004h(base) ]0;badhri@TIGER01766: ~[01;32mbadhri@TIGER01766[00m:[01;34m~[00m$ cd ~/shell-lesson-data/
+[?2004l[?2004h(base) ]0;badhri@TIGER01766: ~/shell-lesson-data[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data[00m$ cd exercise-data/creatures/
+[?2004l[?2004h(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/creatures[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/creatures[00m$ cd -
+[?2004l/home/badhri/shell-lesson-data
+[?2004h(base) ]0;badhri@TIGER01766: ~/shell-lesson-data[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data[00m$ cd -
+[?2004l/home/badhri/shell-lesson-data/exercise-data/creatures
+[?2004h(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/creatures[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/creatures[00m$ cd ..
+[?2004l[?2004h(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data[00m$ cd ..
+[?2004l[?2004h(base) ]0;badhri@TIGER01766: ~/shell-lesson-data[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data[00m$ clear
+[?2004l[H[2J[3J[?2004h(base) ]0;badhri@TIGER01766: ~/shell-lesson-data[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data[00m$ ls -s exercise-data/[K
+[?2004ltotal 24
+4 [0m[01;34malkanes[0m  4 [01;34manimal-counts[0m  4 [01;34mcreatures[0m  4 numbers.txt  4 numbers.txt:Zone.Identifier  4 [01;34mwriting[0m
+[?2004h(base) ]0;badhri@TIGER01766: ~/shell-lesson-data[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data[00m$ ls -s exercise-data[1P exercise-dataS exercise-data
+[?2004l[0m[01;34malkanes[0m  [01;34manimal-counts[0m  [01;34mcreatures[0m  [01;34mwriting[0m  numbers.txt:Zone.Identifier  numbers.txt
+[?2004h(base) ]0;badhri@TIGER01766: ~/shell-lesson-data[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data[00m$ ls -F /
+[?2004l[0m[01;36mbin[0m@   [01;34mdev[0m/  [01;34mhome[0m/  [01;36mlib[0m@    [01;36mlib64[0m@   [01;34mlost+found[0m/  [01;34mmnt[0m/  [01;34mproc[0m/  [01;34mrun[0m/   [01;34msnap[0m/  [01;34msys[0m/  [01;34musr[0m/
+[01;34mboot[0m/  [01;34metc[0m/  [01;32minit[0m*  [01;36mlib32[0m@  [01;36mlibx32[0m@  [01;34mmedia[0m/       [01;34mopt[0m/  [01;34mroot[0m/  [01;36msbin[0m@  [01;34msrv[0m/   [30;42mtmp[0m/  [01;34mvar[0m/
+[?2004h(base) ]0;badhri@TIGER01766: ~/shell-lesson-data[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data[00m$ cd exercise-data/writing/
+[?2004l[?2004h(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/writing[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/writing[00m$ ls -F
+[?2004lLittleWomen.txt  LittleWomen.txt:Zone.Identifier  haiku.txt  haiku.txt:Zone.Identifier
+[?2004h(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/writing[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/writing[00m$ mkdir thesis
+[?2004lmkdir: cannot create directory ‘thesis’: Permission denied
+[?2004h(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/writing[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/writing[00m$ sudo mk [Kdir thesis
+[?2004l[sudo] password for badhri: 
+[?2004h(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/writing[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/writing[00m$ ls -F 
+[?2004lLittleWomen.txt  LittleWomen.txt:Zone.Identifier  haiku.txt  haiku.txt:Zone.Identifier  [0m[01;34mthesis[0m/
+[?2004h(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/writing[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/writing[00m$ ls -F  t[K[Kthesis
+[?2004l[?2004h(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/writing[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/writing[00m$ sudo mkdir -p ,,/project/data ../project/results
+[?2004l[?2004h(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/writing[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/writing[00m$ sudo mkdir -p ,,/project/data ../project/results[1P[1P[1@.[1@.
+[?2004l[?2004h(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/writing[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/writing[00m$ ls -FR ../project
+[?2004l../project:
+[0m[01;34mdata[0m/  [01;34mresults[0m/
+
+../project/data:
+
+../project/results:
+[?2004h(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/writing[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/writing[00m$ cd thesis/
+[?2004l[?2004h(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/writing/thesis[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/writing/thesis[00m$ nano draft.txt
+[?2004l[?2004h[?1049h[22;0;0t[1;10r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[8;58H(B[0;1m[37m[41m[ Directory '.' is not writable ][39;49m(B[m[H(B[0;7m  GNU nano 6.2                                                         draft.txt                                                                   [1;146H(B[m[9d(B[0;7m^G(B[m Help[9;17H(B[0;7m^O(B[m Write Out    (B[0;7m^W(B[m Where Is     (B[0;7m^K(B[m Cut[9;65H(B[0;7m^T(B[m Execute[81G(B[0;7m^C(B[m Location     (B[0;7mM-U(B[m Undo[9;113H(B[0;7mM-A(B[m Set Mark    (B[0;7mM-](B[m To Bracket[10d(B[0;7m^X(B[m Exit[10;17H(B[0;7m^R(B[m Read File    (B[0;7m^\(B[m Replace[49G(B[0;7m^U(B[m Paste[10;65H(B[0;7m^J(B[m Justify[81G(B[0;7m^/(B[m Go To Line   (B[0;7mM-E(B[m Redo[10;113H(B[0;7mM-6(B[m Copy[10;129H(B[0;7m^Q(B[m Where Was[2d[?12l[?25h[?25l[1;82H(B[0;7m*[146G(B[m[?12l[?25h[2dI[?25l[?12l[?25ht[?25l[?12l[?25hs[?25l[?12l[?25h [?25l[?12l[?25hn[?25l[?12l[?25ho[?25l[?12l[?25ht[?25l[?12l[?25h [?25l[?12l[?25h"[?25l[?12l[?25hp[?25l[?12l[?25hu[?25l[?12l[?25hb[?25l[?12l[?25hl[?25l[?12l[?25hi[?25l[?12l[?25hs[?25l[?12l[?25hh[?25l[?12l[?25h [?25l[?12l[?25ho[?25l[?12l[?25hr[?25l[8d[K[?12l[?25h[2;21H[?25l[?12l[?25hp[?25l[?12l[?25he[?25l[?12l[?25hr[?25l[?12l[?25hi[?25l[?12l[?25hs[?25l[?12l[?25hh[?25l[?12l[?25h"[?25l[?12l[?25h [?25l[?12l[?25ha[?25l[?12l[?25hn[?25l[?12l[?25hy[?25l[?12l[?25h [?25l[?12l[?25hm[?25l[?12l[?25ho[?25l[?12l[?25hr[?25l[?12l[?25he[?25l[?12l[?25h,[?25l[3d[?12l[?25h[?25l[?12l[?25hI[?25l[?12l[?25ht[?25l[?12l[?25h'[?25l[?12l[?25hs[?25l[?12l[?25h[A[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h's not "publish or perish" any more,It'[?25l[?12l[?25h[3d[?25l[?12l[?25hs[?25l[?12l[?25h[4d[?25l[?12l[?25h[AIt's[?25l[?12l[?25h [?25l[?12l[?25h"[?25l[?12l[?25hs[?25l[?12l[?25hh[?25l[?12l[?25ha[?25l[?12l[?25hr[?25l[?12l[?25he[?25l[?12l[?25h [?25l[?12l[?25ha[?25l[?12l[?25hn[?25l[?12l[?25hd[?25l[?12l[?25h [?25l[?12l[?25ht[?25l[?12l[?25hh[?25l[?12l[?25hr[?25l[?12l[?25hi[?25l[?12l[?25hv[?25l[?12l[?25he[?25l[?12l[?25h"[?25l[?12l[?25h.[?25l[4d[?12l[?25h[?25l[9;17H[20X[9;37H(B[0;7mM-D(B[m DOS Format    [9;65H        (B[0;7mM-A(B[m Append[26X[9;109H(B[0;7mM-B(B[m Backup File[K[10;2H(B[0;7mC(B[m Cancel[17G[20X[10;37H(B[0;7mM-M(B[m Mac Format      [10;65H        (B[0;7mM-P(B[m Prepend[25X[10;109H(B[0;7m^T(B[m Browse[K[8d(B[0;7mFile Name to Write: draft.txt                                                                                                                      [8;30H(B[m[?12l[?25h[?25l[8;50H[1K (B[0;1m[37m[41m[ Error writing draft.txt: Permission denied ][39;49m(B[m[K[9;17H(B[0;7m^O(B[m Write Out    (B[0;7m^W(B[m Where Is     (B[0;7m^K(B[m Cut[9;65H(B[0;7m^T(B[m Execute      (B[0;7m^C(B[m Location     (B[0;7mM-U(B[m Undo        (B[0;7mM-A(B[m Set Mark    (B[0;7mM-](B[m To Bracket[10;2H(B[0;7mX(B[m Exit  [17G(B[0;7m^R(B[m Read File    (B[0;7m^\(B[m Replace      (B[0;7m^U(B[m Paste[10;65H(B[0;7m^J(B[m Justify      (B[0;7m^/(B[m Go To Line   (B[0;7mM-E(B[m Redo        (B[0;7mM-6(B[m Copy[10;129H(B[0;7m^Q(B[m Where Was[?12l[?25h[4d[?25l[8d(B[0;7mSave modified buffer?                                                                                                                              [9;1H Y(B[m Yes[K[10d(B[0;7m N(B[m No  [10;18H(B[0;7mC(B[m Cancel[K[8;23H[?12l[?25h[?25l[9d(B[0;7m^G(B[m Help[9;37H(B[0;7mM-D(B[m DOS Format[9;73H(B[0;7mM-A(B[m Append[9;109H(B[0;7mM-B(B[m Backup File[10d(B[0;7m^C(B[m Cancel[17G         [10;37H(B[0;7mM-M(B[m Mac Format[10;73H(B[0;7mM-P(B[m Prepend[10;109H(B[0;7m^T(B[m Browse[8d(B[0;7mFile Name to Write: draft.txt(B[m[?12l[?25h[?25l[8;50H[1K (B[0;1m[37m[41m[ Error writing draft.txt: Permission denied ][39;49m(B[m[K[9;17H(B[0;7m^O(B[m Write Out    (B[0;7m^W(B[m Where Is     (B[0;7m^K(B[m Cut[9;65H(B[0;7m^T(B[m Execute      (B[0;7m^C(B[m Location     (B[0;7mM-U(B[m Undo        (B[0;7mM-A(B[m Set Mark    (B[0;7mM-](B[m To Bracket[10;2H(B[0;7mX(B[m Exit  [17G(B[0;7m^R(B[m Read File    (B[0;7m^\(B[m Replace      (B[0;7m^U(B[m Paste[10;65H(B[0;7m^J(B[m Justify      (B[0;7m^/(B[m Go To Line   (B[0;7mM-E(B[m Redo        (B[0;7mM-6(B[m Copy[10;129H(B[0;7m^Q(B[m Where Was[?12l[?25h[4d[?25l[8d(B[0;7mSave modified buffer?                                                                                                                              [9;1H Y(B[m Yes[K[10d(B[0;7m N(B[m No  [10;18H(B[0;7mC(B[m Cancel[K[8;23H[?12l[?25h[?25l[9d(B[0;7m^G(B[m Help[9;37H(B[0;7mM-D(B[m DOS Format[9;73H(B[0;7mM-A(B[m Append[9;109H(B[0;7mM-B(B[m Backup File[10d(B[0;7m^C(B[m Cancel[17G         [10;37H(B[0;7mM-M(B[m Mac Format[10;73H(B[0;7mM-P(B[m Prepend[10;109H(B[0;7m^T(B[m Browse[8d(B[0;7mFile Name to Write: draft.txt(B[m[?12l[?25h[?25l[8;50H[1K (B[0;1m[37m[41m[ Error writing draft.txt: Permission denied ][39;49m(B[m[K[9;17H(B[0;7m^O(B[m Write Out    (B[0;7m^W(B[m Where Is     (B[0;7m^K(B[m Cut[9;65H(B[0;7m^T(B[m Execute      (B[0;7m^C(B[m Location     (B[0;7mM-U(B[m Undo        (B[0;7mM-A(B[m Set Mark    (B[0;7mM-](B[m To Bracket[10;2H(B[0;7mX(B[m Exit  [17G(B[0;7m^R(B[m Read File    (B[0;7m^\(B[m Replace      (B[0;7m^U(B[m Paste[10;65H(B[0;7m^J(B[m Justify      (B[0;7m^/(B[m Go To Line   (B[0;7mM-E(B[m Redo        (B[0;7mM-6(B[m Copy[10;129H(B[0;7m^Q(B[m Where Was[?12l[?25h[4d[?25l[5d[?12l[?25h[?25l[9;17H[20X[9;37H(B[0;7mM-D(B[m DOS Format    [9;65H        (B[0;7mM-A(B[m Append[26X[9;109H(B[0;7mM-B(B[m Backup File[K[10;2H(B[0;7mC(B[m Cancel[17G[20X[10;37H(B[0;7mM-M(B[m Mac Format      [10;65H        (B[0;7mM-P(B[m Prepend[25X[10;109H(B[0;7m^T(B[m Browse[K[8d(B[0;7mFile Name to Write: draft.txt                                                                                                                      [8;30H(B[m[?12l[?25h[?25l[8;50H[1K (B[0;1m[37m[41m[ Error writing draft.txt: Permission denied ][39;49m(B[m[K[9;17H(B[0;7m^O(B[m Write Out    (B[0;7m^W(B[m Where Is     (B[0;7m^K(B[m Cut[9;65H(B[0;7m^T(B[m Execute      (B[0;7m^C(B[m Location     (B[0;7mM-U(B[m Undo        (B[0;7mM-A(B[m Set Mark    (B[0;7mM-](B[m To Bracket[10;2H(B[0;7mX(B[m Exit  [17G(B[0;7m^R(B[m Read File    (B[0;7m^\(B[m Replace      (B[0;7m^U(B[m Paste[10;65H(B[0;7m^J(B[m Justify      (B[0;7m^/(B[m Go To Line   (B[0;7mM-E(B[m Redo        (B[0;7mM-6(B[m Copy[10;129H(B[0;7m^Q(B[m Where Was[?12l[?25h[5d[?25l[9;17H[20X[9;37H(B[0;7mM-D(B[m DOS Format    [9;65H        (B[0;7mM-A(B[m Append[26X[9;109H(B[0;7mM-B(B[m Backup File[K[10;2H(B[0;7mC(B[m Cancel[17G[20X[10;37H(B[0;7mM-M(B[m Mac Format      [10;65H        (B[0;7mM-P(B[m Prepend[25X[10;109H(B[0;7m^T(B[m Browse[K[8d(B[0;7mFile Name to Write: draft.txt                                                                                                                      [8;30H(B[m[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[C[?12l[?25h[?25l[C[?12l[?25h[?25l[C[?12l[?25h[?25l[C[?12l[?25h[?25l[C[?12l[?25h[?25l(B[0;7m1.txt(B[m[?12l[?25h[?25l(B[0;7mSave file under DIFFERENT NAME?[9d Y(B[m Yes[K[10d(B[0;7m N(B[m No    [17G(B[0;7m^C(B[m Cancel[K[8;33H[?12l[?25h[?25l[8;50H[1K (B[0;1m[37m[41m[ Error writing draft1.txt: Permission denied ][39;49m(B[m[K[9d(B[0;7m^G(B[m Help[9;17H(B[0;7m^O(B[m Write Out    (B[0;7m^W(B[m Where Is     (B[0;7m^K(B[m Cut[9;65H(B[0;7m^T(B[m Execute[81G(B[0;7m^C(B[m Location     (B[0;7mM-U(B[m Undo[9;113H(B[0;7mM-A(B[m Set Mark    (B[0;7mM-](B[m To Bracket[10d(B[0;7m^X(B[m Exit[10;18H(B[0;7mR(B[m Read File    (B[0;7m^\(B[m Replace[49G(B[0;7m^U(B[m Paste[10;65H(B[0;7m^J(B[m Justify[81G(B[0;7m^/(B[m Go To Line   (B[0;7mM-E(B[m Redo[10;113H(B[0;7mM-6(B[m Copy[10;129H(B[0;7m^Q(B[m Where Was[?12l[?25h[5d[?25l[8d(B[0;7mSave modified buffer?                                                                                                                              [9;1H Y(B[m Yes[K[10d(B[0;7m N(B[m No  [10;18H(B[0;7mC(B[m Cancel[K[8;23H[?12l[?25h[?25l[9d(B[0;7m^G(B[m Help[9;37H(B[0;7mM-D(B[m DOS Format[9;73H(B[0;7mM-A(B[m Append[9;109H(B[0;7mM-B(B[m Backup File[10d(B[0;7m^C(B[m Cancel[17G         [10;37H(B[0;7mM-M(B[m Mac Format[10;73H(B[0;7mM-P(B[m Prepend[10;109H(B[0;7m^T(B[m Browse[8d(B[0;7mFile Name to Write: draft.txt(B[m[?12l[?25h[?25l[8;67H[1K (B[0;7m[ Cancelled ](B[m[K[9;17H(B[0;7m^O(B[m Write Out    (B[0;7m^W(B[m Where Is     (B[0;7m^K(B[m Cut[9;65H(B[0;7m^T(B[m Execute      (B[0;7m^C(B[m Location     (B[0;7mM-U(B[m Undo        (B[0;7mM-A(B[m Set Mark    (B[0;7mM-](B[m To Bracket[10;2H(B[0;7mX(B[m Exit  [17G(B[0;7m^R(B[m Read File    (B[0;7m^\(B[m Replace      (B[0;7m^U(B[m Paste[10;65H(B[0;7m^J(B[m Justify      (B[0;7m^/(B[m Go To Line   (B[0;7mM-E(B[m Redo        (B[0;7mM-6(B[m Copy[10;129H(B[0;7m^Q(B[m Where Was[?12l[?25h[5d[?25l[8d(B[0;7mSave modified buffer?                                                                                                                              [9;1H Y(B[m Yes[K[10d(B[0;7m N(B[m No  [10;18H(B[0;7mC(B[m Cancel[K[8;23H[?12l[?25h[?25l[J[10d[?12l[?25h[10;1H[?1049l[23;0;0t[?1l>[?2004l[?2004h(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/writing/thesis[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/writing/thesis[00m$ ls
+[?2004l[?2004h(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/writing/thesis[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/writing/thesis[00m$ ls -F
+[?2004l[?2004h(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/writing/thesis[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/writing/thesis[00m$ sudo nano drad[Kft.txt
+[?2004l[?2004h[?1049h[22;0;0t[1;10r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[8;68H(B[0;7m[ New File ](B[m[H(B[0;7m  GNU nano 6.2                                                         draft.txt                                                                   [1;146H(B[m[9d(B[0;7m^G(B[m Help[9;17H(B[0;7m^O(B[m Write Out    (B[0;7m^W(B[m Where Is     (B[0;7m^K(B[m Cut[9;65H(B[0;7m^T(B[m Execute[81G(B[0;7m^C(B[m Location     (B[0;7mM-U(B[m Undo[9;113H(B[0;7mM-A(B[m Set Mark    (B[0;7mM-](B[m To Bracket[10d(B[0;7m^X(B[m Exit[10;17H(B[0;7m^R(B[m Read File    (B[0;7m^\(B[m Replace[49G(B[0;7m^U(B[m Paste[10;65H(B[0;7m^J(B[m Justify[81G(B[0;7m^/(B[m Go To Line   (B[0;7mM-E(B[m Redo[10;113H(B[0;7mM-6(B[m Copy[10;129H(B[0;7m^Q(B[m Where Was[2d[?12l[?25h[?25l[1;82H(B[0;7m*[146G(B[m[?12l[?25h[2dS[?25l[?12l[?25ha[?25l[?12l[?25hm[?25l[?12l[?25hp[?25l[?12l[?25hl[?25l[?12l[?25he[?25l[?12l[?25h [?25l[?12l[?25ht[?25l[?12l[?25he[?25l[?12l[?25hx[?25l[?12l[?25ht[?25l[?12l[?25h [?25l[?12l[?25hf[?25l[?12l[?25hi[?25l[?12l[?25hl[?25l[?12l[?25he[?25l[9d[20X[9;37H(B[0;7mM-D(B[m DOS Format    [9;65H        (B[0;7mM-A(B[m Append[26X[9;109H(B[0;7mM-B(B[m Backup File[K[10;2H(B[0;7mC(B[m Cancel[17G[20X[10;37H(B[0;7mM-M(B[m Mac Format      [10;65H        (B[0;7mM-P(B[m Prepend[25X[10;109H(B[0;7m^T(B[m Browse[K[8d(B[0;7mFile Name to Write: draft.txt                                                                                                                      [8;30H(B[m[?12l[?25h[?25l[8;66H[1K (B[0;7m[ Writing... ](B[m[K[1;82H(B[0;7m [146G(B[m[8;66H(B[0;7m[ Wrote 1 line ](B[m[9;17H(B[0;7m^O(B[m Write Out    (B[0;7m^W(B[m Where Is     (B[0;7m^K(B[m Cut[9;65H(B[0;7m^T(B[m Execute      (B[0;7m^C(B[m Location     (B[0;7mM-U(B[m Undo        (B[0;7mM-A(B[m Set Mark    (B[0;7mM-](B[m To Bracket[10;2H(B[0;7mX(B[m Exit  [17G(B[0;7m^R(B[m Read File    (B[0;7m^\(B[m Replace      (B[0;7m^U(B[m Paste[10;65H(B[0;7m^J(B[m Justify      (B[0;7m^/(B[m Go To Line   (B[0;7mM-E(B[m Redo        (B[0;7mM-6(B[m Copy[10;129H(B[0;7m^Q(B[m Where Was[?12l[?25h[2;17H[?25l[8d[J[10d[?12l[?25h[10;1H[?1049l[23;0;0t[?1l>[?2004l[?2004h(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/writing/thesis[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/writing/thesis[00m$ ls -F
+[?2004ldraft.txt
+[?2004h(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/writing/thesis[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/writing/thesis[00m$ mv thd[Ke[K[K[K[K[K[Kmv draft.txt quotes.txt
+[?2004lmv: cannot move 'draft.txt' to 'quotes.txt': Permission denied
+[?2004h(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/writing/thesis[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/writing/thesis[00m$ mv draft.txt quotes.txt[1@s[1@u[1@d[1@o[1@ 
+[?2004l[?2004h(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/writing/thesis[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/writing/thesis[00m$ ls
+[?2004lquotes.txt
+[?2004h(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/writing/thesis[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/writing/thesis[00m$ cp quotes.txt thesis/quotatio[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[7mcp -r thesis thesis_backup[27mcp -r thesis thesis_backup
+[?2004lcp: cannot stat 'thesis': No such file or directory
+[?2004h(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/writing/thesis[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/writing/thesis[00m$ cd ..
+[?2004l[?2004h(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/writing[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/writing[00m$ [7mcp -r thesis thesis_backup[27mcp -r thesis thesis_backup
+[?2004lcp: cannot create directory 'thesis_backup': Permission denied
+[?2004h(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/writing[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/writing[00m$ s[Ksudo [7mcp -r thesis thesis_backup[27mcp -r thesis thesis_backup
+[?2004l[?2004h(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/writing[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/writing[00m$ ls
+[?2004l[0m[01;34m,,[0m  LittleWomen.txt  LittleWomen.txt:Zone.Identifier  haiku.txt  haiku.txt:Zone.Identifier  [01;34mthesis[0m  [01;34mthesis_backup[0m
+[?2004h(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/writing[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/writing[00m$ cd thesis[K[K[K[K[K[K[K[K[Kcd thesis_backup/
+[?2004l[?2004h(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/writing/thesis_backup[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/writing/thesis_backup[00m$ ls
+[?2004lquotes.txt
+[?2004h(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/writing/thesis_backup[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/writing/thesis_backup[00m$ cd ..
+[?2004l[?2004h(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/writing[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/writing[00m$ cd thesis
+[?2004l[?2004h(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/writing/thesis[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/writing/thesis[00m$ rm quotes.txt 
+[?2004lrm: remove write-protected regular file 'quotes.txt'? 
+[?2004h(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/writing/thesis[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/writing/thesis[00m$ ls
+[?2004lquotes.txt
+[?2004h(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/writing/thesis[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/writing/thesis[00m$ lsrm quotes.txt 
+[?2004lrm: remove write-protected regular file 'quotes.txt'? y
+rm: cannot remove 'quotes.txt': Permission denied
+[?2004h(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/writing/thesis[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/writing/thesis[00m$ s[Krm quotes.txt [1@s[1@u[1@d[1@o[1@ 
+[?2004l[?2004h(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/writing/thesis[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/writing/thesis[00m$ ls
+[?2004l[?2004h(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/writing/thesis[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/writing/thesis[00m$ rm -r thesis
+[?2004lrm: cannot remove 'thesis': No such file or directory
+[?2004h(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/writing/thesis[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/writing/thesis[00m$ cd ..
+[?2004l[?2004h(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/writing[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/writing[00m$ sudo rm -r thesis
+[?2004l[?2004h(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/writing[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/writing[00m$ mk[K[Ksudo mkdir backup
+[?2004l[?2004h(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/writing[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/writing[00m$ cd
+[?2004l[?2004h(base) ]0;badhri@TIGER01766: ~[01;32mbadhri@TIGER01766[00m:[01;34m~[00m$ cd shell-lesson-data/
+[?2004l[?2004h(base) ]0;badhri@TIGER01766: ~/shell-lesson-data[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data[00m$ ls
+[?2004l[0m[01;34mexercise-data[0m  [01;34mnorth-pacific-gyre[0m
+[?2004h(base) ]0;badhri@TIGER01766: ~/shell-lesson-data[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data[00m$ cd exercise-data/
+[?2004l[?2004h(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data[00m$ ls
+[?2004l[0m[01;34malkanes[0m  [01;34manimal-counts[0m  [01;34mcreatures[0m  numbers.txt  numbers.txt:Zone.Identifier  [01;34mproject[0m  [01;34mwriting[0m
+[?2004h(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data[00m$ [7mcp creatures/minotaur.dat creatures/unicorn.dat backup/[27mcp creatures/minotaur.dat creatures/unicorn.dat backup/
+[?2004lcp: target 'backup/' is not a directory
+[?2004h(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data[00m$ cp creatures/minotaur.dat creatures/unicorn.dat backup/ls[Kcd exercise-data/ls[Kcd shell-lesson-data/[Ksudo mkdir backuprm -r thesismkdir backup
+[?2004l[?2004h(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data[00m$ sudo mkdir backupcp creatures/minotaur.dat creatures/unicorn.dat backup/
+[?2004lcp: cannot create regular file 'backup/minotaur.dat': Permission denied
+cp: cannot create regular file 'backup/unicorn.dat': Permission denied
+[?2004h(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data[00m$ cp creatures/minotaur.dat creatures/unicorn.dat backup/[1@s[1@u[1@d[1@o[1@ 
+[?2004l[?2004h(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data[00m$ sudo cp creatures/minotaur.dat creatures/unicorn.dat backup/[5P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[5@sudo [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Kcd creatures/
+[?2004l[?2004h(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/creatures[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/creatures[00m$ ls -F
+[?2004lbasilisk.dat  basilisk.dat:Zone.Identifier  minotaur.dat  minotaur.dat:Zone.Identifier  unicorn.dat  unicorn.dat:Zone.Identifier
+[?2004h(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/creatures[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/creatures[00m$ cd ..
+[?2004l[?2004h(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data[00m$ cd alkanes/
+[?2004l[?2004h(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/alkanes[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/alkanes[00m$ ls
+[?2004lcubane.pdb                  ethane.pdb:Zone.Identifier   octane.pdb                  pentane.pdb:Zone.Identifier
+cubane.pdb:Zone.Identifier  methane.pdb                  octane.pdb:Zone.Identifier  propane.pdb
+ethane.pdb                  methane.pdb:Zone.Identifier  pentane.pdb                 propane.pdb:Zone.Identifier
+[?2004h(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/alkanes[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/alkanes[00m$ wc ci[Kubane.pdb
+[?2004l  20  156 1158 cubane.pdb
+[?2004h(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/alkanes[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/alkanes[00m$ wc *.pdb
+[?2004l  20  156 1158 cubane.pdb
+  12   84  622 ethane.pdb
+   9   57  422 methane.pdb
+  30  246 1828 octane.pdb
+  21  165 1226 pentane.pdb
+  15  111  825 propane.pdb
+ 107  819 6081 total
+[?2004h(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/alkanes[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/alkanes[00m$ wc -l *pdb.pdb
+[?2004l  20 cubane.pdb
+  12 ethane.pdb
+   9 methane.pdb
+  30 octane.pdb
+  21 pentane.pdb
+  15 propane.pdb
+ 107 total
+[?2004h(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/alkanes[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/alkanes[00m$ wc -l *.pdb > length[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kecho hello
+[?2004lhello
+[?2004h(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/alkanes[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/alkanes[00m$ sudo nao[Kno lenght[K[Kths.txt
+[?2004l[sudo] password for badhri: 
+[?2004h[?1049h[22;0;0t[1;10r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[8;68H(B[0;7m[ New File ](B[m[H(B[0;7m  GNU nano 6.2                                                        lengths.txt                                                                  [1;146H(B[m[9d(B[0;7m^G(B[m Help[9;17H(B[0;7m^O(B[m Write Out    (B[0;7m^W(B[m Where Is     (B[0;7m^K(B[m Cut[9;65H(B[0;7m^T(B[m Execute[81G(B[0;7m^C(B[m Location     (B[0;7mM-U(B[m Undo[9;113H(B[0;7mM-A(B[m Set Mark    (B[0;7mM-](B[m To Bracket[10d(B[0;7m^X(B[m Exit[10;17H(B[0;7m^R(B[m Read File    (B[0;7m^\(B[m Replace[49G(B[0;7m^U(B[m Paste[10;65H(B[0;7m^J(B[m Justify[81G(B[0;7m^/(B[m Go To Line   (B[0;7mM-E(B[m Redo[10;113H(B[0;7mM-6(B[m Copy[10;129H(B[0;7m^Q(B[m Where Was[2d[?12l[?25h[?25l[8d[K[1;83H(B[0;7m*[146G(B[m[2;3H30  octane.pdb[3;3H21  pentane.pdb[4;3H15  propane.pdb[5d 107  total[?12l[?25h[?25l[9;17H[20X[9;37H(B[0;7mM-D(B[m DOS Format    [9;65H        (B[0;7mM-A(B[m Append[26X[9;109H(B[0;7mM-B(B[m Backup File[K[10;2H(B[0;7mC(B[m Cancel[17G[20X[10;37H(B[0;7mM-M(B[m Mac Format      [10;65H        (B[0;7mM-P(B[m Prepend[25X[10;109H(B[0;7m^T(B[m Browse[K[8d(B[0;7mFile Name to Write: lengths.txt                                                                                                                    [8;32H(B[m[?12l[?25h[?25l[8;66H[1K (B[0;7m[ Writing... ](B[m[K[1;83H(B[0;7m [146G(B[m[8;66H(B[0;7m[ Wrote 7 lines ](B[m[9;17H(B[0;7m^O(B[m Write Out    (B[0;7m^W(B[m Where Is     (B[0;7m^K(B[m Cut[9;65H(B[0;7m^T(B[m Execute      (B[0;7m^C(B[m Location     (B[0;7mM-U(B[m Undo        (B[0;7mM-A(B[m Set Mark    (B[0;7mM-](B[m To Bracket[10;2H(B[0;7mX(B[m Exit  [17G(B[0;7m^R(B[m Read File    (B[0;7m^\(B[m Replace      (B[0;7m^U(B[m Paste[10;65H(B[0;7m^J(B[m Justify      (B[0;7m^/(B[m Go To Line   (B[0;7mM-E(B[m Redo        (B[0;7mM-6(B[m Copy[10;129H(B[0;7m^Q(B[m Where Was[?12l[?25h[5;12H[?25l[8d[J[10d[?12l[?25h[10;1H[?1049l[23;0;0t[?1l>[?2004l[?2004h(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/alkanes[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/alkanes[00m$ ls lem[Kngths.txt 
+[?2004llengths.txt
+[?2004h(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/alkanes[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/alkanes[00m$ cat lengths.txt 
+[?2004l  20  cubane.pdb
+  12  ethane.pdb
+   9  methane.pdb
+  30  octane.pdb
+  21  pentane.pdb
+  15  propane.pdb
+ 107  total
+[?2004h(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/alkanes[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/alkanes[00m$ sort -n lengths.txt 
+[?2004l   9  methane.pdb
+  12  ethane.pdb
+  15  propane.pdb
+  20  cubane.pdb
+  21  pentane.pdb
+  30  octane.pdb
+ 107  total
+[?2004h(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/alkanes[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/alkanes[00m$ sort -n lengths.txt > sorted-lengths.txt[C[1@s[1@i[1P[1@u[1@d[1@o[1@ 
+[?2004lbash: sorted-lengths.txt: Permission denied
+[?2004h(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/alkanes[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/alkanes[00m$ sudo sort -n lengths.txt > sorted-lengths.txt[1P[1P[1P[1P[1P
+[?2004lbash: sorted-lengths.txt: Permission denied
+[?2004h(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/alkanes[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/alkanes[00m$ head -n 1 lengths.txt 
+[?2004l  20  cubane.pdb
+[?2004h(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/alkanes[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/alkanes[00m$ head -n 1 lengths.txt sort -n lengths.txt > sorted-lengths.txt[5@udo s[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[5P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K| head -n 1
+[?2004l   9  methane.pdb
+[?2004h(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/alkanes[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/alkanes[00m$ e[Kwc -l *.pdb 
+[?2004l  20 cubane.pdb
+  12 ethane.pdb
+   9 methane.pdb
+  30 octane.pdb
+  21 pentane.pdb
+  15 propane.pdb
+ 107 total
+[?2004h(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/alkanes[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/alkanes[00m$ wc -l *.pdb [Kwc -l *.pdb [Kwc -l *.pdb | sort -n
+[?2004l   9 methane.pdb
+  12 ethane.pdb
+  15 propane.pdb
+  20 cubane.pdb
+  21 pentane.pdb
+  30 octane.pdb
+ 107 total
+[?2004h(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/alkanes[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/alkanes[00m$ wc -l *.pdb | sort -n | head -n 1
+[?2004l   9 methane.pdb
+[?2004h(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/alkanes[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/alkanes[00m$ cd ..
+[?2004l[?2004h(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data[00m$ cd creatures/
+[?2004l[?2004h(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/creatures[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/creatures[00m$ head -n 5 basilisk.dat minotaur.dat unicorn.dat
+[?2004l==> basilisk.dat <==
+COMMON NAME: basilisk
+CLASSIFICATION: basiliscus vulgaris
+UPDATED: 1745-05-02
+CCCCAACGAG
+GAAACAGATC
+
+==> minotaur.dat <==
+COMMON NAME: minotaur
+CLASSIFICATION: bos hominus
+UPDATED: 1765-02-17
+CCCGAAGGAC
+CGACATCTCT
+
+==> unicorn.dat <==
+COMMON NAME: unicorn
+CLASSIFICATION: equus monoceros
+UPDATED: 1738-11-24
+AGCCGGGTCG
+CTTTACCTTA
+[?2004h(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/creatures[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/creatures[00m$ for thing in list_of [K_things
+[?2004l[?2004h> do
+[?2004l[?2004h> operation [K_using $thing
+[?2004l[?2004h> done
+[?2004loperation_using: command not found
+[?2004h(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/creatures[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/creatures[00m$ [7mfor filename in basilisk.dat minotaur.dat unicorn.dat[27mfor filename in basilisk.dat minotaur.dat unicorn.dat
+[?2004l[?2004h> do echo $filename
+[?2004l[?2004h> head -n 2 $filename | tail -n 1
+[?2004l[?2004h> done
+[?2004lbasilisk.dat
+CLASSIFICATION: basiliscus vulgaris
+minotaur.dat
+CLASSIFICATION: bos hominus
+unicorn.dat
+CLASSIFICATION: equus monoceros
+[?2004h(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/creatures[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/creatures[00m$ for filename in basilisk.dat minotaur.dat unicorn.dat; do echo $filename; head -n 2 $filename | tail -n 1; done[1P[1P[1P[1P[1P[1P[1P[1P[1@x[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C head [1P[A(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/creatures[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/creatures[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C head -[1P[A(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/creatures[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/creatures[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C head -n[1P[A(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/creatures[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/creatures[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C head -n [1P[A(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/creatures[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/creatures[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C head -n 2[1P[A(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/creatures[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/creatures[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C head -n 2 [1P[A(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/creatures[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/creatures[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C head -n 2 $[1P[A(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/creatures[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/creatures[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C head -n 2 $x[1P[A(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/creatures[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/creatures[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C head -n 2 $x [1P[A(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/creatures[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/creatures[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C head -n 2 $x |[1P[A(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/creatures[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/creatures[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Chead -n 2 $x | [1P[A(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/creatures[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/creatures[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C head -n 2 $x | t[1P[A(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/creatures[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/creatures[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C head -n 2 $x | ta[1P[A(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/creatures[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/creatures[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C head -n 2 $x | tai[1P[A(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/creatures[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/creatures[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C head -n 2 $x | tail[1P[A(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/creatures[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/creatures[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Chead -n 2 $x | tail [1P[A(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/creatures[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/creatures[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C head -n 2 $x | tail -[1P[A(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/creatures[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/creatures[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C head -n 2 $x | tail -n[1P[A(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/creatures[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/creatures[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Chead -n 2 $x | tail -n [1P[A(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/creatures[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/creatures[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C in basilisk.dat minotaur.dat unicorn.dat; head -n 2 $x | tail -n 1[1P[A(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/creatures[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/creatures[00m$ [C[C[C[C[C[C[C[C[C[C[C in basilisk.dat minotaur.dat unicorn.dat; head -n 2 $x | tail -n 1;[1P done[A(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/creatures[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/creatures[00m$ [C[C[C[C[C[C[C[C[C[C in basilisk.dat minotaur.dat unicorn.dat; head -n 2 $x | tail -n 1; [1Pdone[A(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/creatures[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/creatures[00m$ [C[C[C[C[C[C[C[C[C in basilisk.dat minotaur.dat unicorn.dat; head -n 2 $x | tail -n 1; d[1Pone[A(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/creatures[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/creatures[00m$ [C[C[C[C[C[C[C[C in basilisk.dat minotaur.dat unicorn.dat; head -n 2 $x | tail -n 1; do[1Pne[A(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/creatures[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/creatures[00m$ [C[C[C[C[C[C[C in basilisk.dat minotaur.dat unicorn.dat; head -n 2 $x | tail -n 1; don[1Pe[A(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/creatures[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/creatures[00m$ [C[C[C[C[C[C in basilisk.dat minotaur.dat unicorn.dat; head -n 2 $x | tail -n 1; done[K[A(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/creatures[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/creatures[00m$ [C[C[C[C[C in basilisk.dat minotaur.dat unicorn.dat; head -n 2 $x | tail -n 1; done [K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cx in basilisk.dat minotaur.dat unicorn.dat; head -n 2 $x | tail -n 1; done[A(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/creatures[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/creatures[00m$ [C[C[C[C[C
+
+[?2004lbash: syntax error near unexpected token `head'
+[?2004h(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/creatures[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/creatures[00m$ for x in basilisk.dat minotaur.dat unicorn.dat
+[?2004l[?2004h> do 
+[?2004l[?2004h> head -n 2 $x | tail -n 1
+[?2004l[?2004h> done
+[?2004lCLASSIFICATION: basiliscus vulgaris
+CLASSIFICATION: bos hominus
+CLASSIFICATION: equus monoceros
+[?2004h(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/creatures[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/creatures[00m$ for temperature in basilisk.dat minotaur.dat unicorn.dat
+[?2004l[?2004h> do head [K[K[K[K[K
+[?2004l[?2004h> head -n 2 %[K$temperature |tail -n 1
+[?2004l[?2004h> done
+[?2004lCLASSIFICATION: basiliscus vulgaris
+CLASSIFICATION: bos hominus
+CLASSIFICATION: equus monoceros
+[?2004h(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/creatures[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/creatures[00m$ for filename in *.dat
+[?2004l[?2004h> do
+[?2004l[?2004h> $filename
+[?2004l[?2004h> head -n 100 $filename | tail -n 20
+[?2004l[?2004h> done
+[?2004lbasilisk.dat: command not found
+CGGTACCGAA
+AAGGGTCGCG
+CAAGTGTTCC
+CGGGACAATA
+GTTCTGCTAA
+GATAAGTATG
+TGCCGACTTA
+CCCGACCGTC
+TAGGTTATAA
+GGCACAACCG
+CTTCACTGTA
+GAGGTGTACA
+AGGATCCGTT
+GCGCGGGCGG
+CAGTCTATGT
+TTTTCGACAC
+TGGACTGCTT
+CCCTTTGAGG
+GTGGATTTTT
+CGTAACGGGT
+minotaur.dat: command not found
+GGTTGGACCG
+AGTGAACGAA
+GCGATTGATG
+CCCAGTATTG
+GTTTCGGGTC
+CCACCAGGAA
+CAATGTTGGA
+CTTTAGCACG
+ACAGGAATCA
+ATCGTTTCGT
+AATGGTGGCA
+CTTTGGGGTT
+GCAGGCCCGC
+CTGTGCCTTC
+AACGGTCGGC
+AAATAGGACA
+GAGATTTCCT
+GCCTCAAACA
+TCGCAAGACG
+ATTTATCCGG
+unicorn.dat: command not found
+CGGTACCGAA
+AAGGGTCGCG
+CAAGTGTTCC
+CGGGACAATA
+GTTCTGCTAA
+GATAAGTATG
+TGCCGACTTA
+CCCGACCGTC
+TAGGTTATAA
+GGCACAACCG
+CTTCACTGTA
+GAGGTGTACA
+AGGATCCGTT
+GCGCGGGCGG
+CAGTCTATGT
+TTTTCGACAC
+TGGACTGCTT
+CCCTTTGAGG
+GTGGATTTTT
+CGTAACGGGT
+[?2004h(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/creatures[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/creatures[00m$ [7mcp basilisk.dat minotaur.dat unicorn.dat original-*.dat[27mcp basilisk.dat minotaur.dat unicorn.dat original-*.dat
+[?2004lcp: target 'original-*.dat' is not a directory
+[?2004h(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/creatures[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/creatures[00m$ for filename in *.data[K
+[?2004l[?2004h> do 
+[?2004l[?2004h> cp $filename original-$filename
+[?2004l[?2004h> done
+[?2004lcp: cannot create regular file 'original-basilisk.dat': Permission denied
+cp: cannot create regular file 'original-minotaur.dat': Permission denied
+cp: cannot create regular file 'original-unicorn.dat': Permission denied
+[?2004h(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/creatures[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/creatures[00m$ for filename in *.dat
+[?2004l[?2004h> do
+[?2004l[?2004h> sudo cp $filename original-$filename
+[?2004l[?2004h> done
+[?2004l[sudo] password for badhri: 
+[?2004h(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/creatures[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/creatures[00m$ cp[K[Kls
+[?2004lbasilisk.dat                  minotaur.dat                  original-basilisk.dat  original-unicorn.dat  unicorn.dat:Zone.Identifier
+basilisk.dat:Zone.Identifier  minotaur.dat:Zone.Identifier  original-minotaur.dat  unicorn.dat
+[?2004h(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/creatures[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/creatures[00m$ cd ../alkanes/
+[?2004l[?2004h(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/alkanes[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/alkanes[00m$ sudo nano middle.sh
+[?2004l[?2004h[?1049h[22;0;0t[1;10r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[8;68H(B[0;7m[ New File ](B[m[H(B[0;7m  GNU nano 6.2                                                         middle.sh                                                                   [1;146H(B[m[9d(B[0;7m^G(B[m Help[9;17H(B[0;7m^O(B[m Write Out    (B[0;7m^W(B[m Where Is     (B[0;7m^K(B[m Cut[9;65H(B[0;7m^T(B[m Execute[81G(B[0;7m^C(B[m Location     (B[0;7mM-U(B[m Undo[9;113H(B[0;7mM-A(B[m Set Mark    (B[0;7mM-](B[m To Bracket[10d(B[0;7m^X(B[m Exit[10;17H(B[0;7m^R(B[m Read File    (B[0;7m^\(B[m Replace[49G(B[0;7m^U(B[m Paste[10;65H(B[0;7m^J(B[m Justify[81G(B[0;7m^/(B[m Go To Line   (B[0;7mM-E(B[m Redo[10;113H(B[0;7mM-6(B[m Copy[10;129H(B[0;7m^Q(B[m Where Was[2d[?12l[?25h[?25l[8d[K[1;82H(B[0;7m*[146G(B[m[2d(B[0;1m[34mhead[35m -n[39m(B[m 15 octane.pdb [32m|[39m(B[m (B[0;1m[34mtail[35m -n[39m(B[m 5[?12l[?25h[?25l[9;17H[20X[9;37H(B[0;7mM-D(B[m DOS Format    [9;65H        (B[0;7mM-A(B[m Append[26X[9;109H(B[0;7mM-B(B[m Backup File[K[10;2H(B[0;7mC(B[m Cancel[17G[20X[10;37H(B[0;7mM-M(B[m Mac Format      [10;65H        (B[0;7mM-P(B[m Prepend[25X[10;109H(B[0;7m^T(B[m Browse[K[8d(B[0;7mFile Name to Write: middle.sh                                                                                                                      [8;30H(B[m[?12l[?25h[?25l[8;66H[1K (B[0;7m[ Writing... ](B[m[K[1;82H(B[0;7m [146G(B[m[8;66H(B[0;7m[ Wrote 1 line ](B[m[9;17H(B[0;7m^O(B[m Write Out    (B[0;7m^W(B[m Where Is     (B[0;7m^K(B[m Cut[9;65H(B[0;7m^T(B[m Execute      (B[0;7m^C(B[m Location     (B[0;7mM-U(B[m Undo        (B[0;7mM-A(B[m Set Mark    (B[0;7mM-](B[m To Bracket[10;2H(B[0;7mX(B[m Exit  [17G(B[0;7m^R(B[m Read File    (B[0;7m^\(B[m Replace      (B[0;7m^U(B[m Paste[10;65H(B[0;7m^J(B[m Justify      (B[0;7m^/(B[m Go To Line   (B[0;7mM-E(B[m Redo        (B[0;7mM-6(B[m Copy[10;129H(B[0;7m^Q(B[m Where Was[?12l[?25h[2;34H[?25l[8d[J[10d[?12l[?25h[10;1H[?1049l[23;0;0t[?1l>[?2004l[?2004h(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/alkanes[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/alkanes[00m$ bah[Ksh middle.sh 
+[?2004lATOM      9  H           1      -4.502   0.681   0.785  1.00  0.00
+ATOM     10  H           1      -5.254  -0.243  -0.537  1.00  0.00
+ATOM     11  H           1      -4.357   1.252  -0.895  1.00  0.00
+ATOM     12  H           1      -3.009  -0.741  -1.467  1.00  0.00
+ATOM     13  H           1      -3.172  -1.337   0.206  1.00  0.00
+[?2004h(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/alkanes[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/alkanes[00m$ bash middle.sh sudo nano middle.sh
+[?2004l[?2004h[?1049h[22;0;0t[1;10r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[8;67H(B[0;7m[ Reading... ](B[m[8;73H(B[0;7m 1 line ](B[m[H(B[0;7m  GNU nano 6.2                                                         middle.sh                                                                   [1;146H(B[m[9d(B[0;7m^G(B[m Help[9;17H(B[0;7m^O(B[m Write Out    (B[0;7m^W(B[m Where Is     (B[0;7m^K(B[m Cut[9;65H(B[0;7m^T(B[m Execute[81G(B[0;7m^C(B[m Location     (B[0;7mM-U(B[m Undo[9;113H(B[0;7mM-A(B[m Set Mark    (B[0;7mM-](B[m To Bracket[10d(B[0;7m^X(B[m Exit[10;17H(B[0;7m^R(B[m Read File    (B[0;7m^\(B[m Replace[49G(B[0;7m^U(B[m Paste[10;65H(B[0;7m^J(B[m Justify[81G(B[0;7m^/(B[m Go To Line   (B[0;7mM-E(B[m Redo[10;113H(B[0;7mM-6(B[m Copy[10;129H(B[0;7m^Q(B[m Where Was[2d(B[0;1m[34mhead[35m -n[39m(B[m 15 octane.pdb [32m|[39m(B[m (B[0;1m[34mtail[35m -n[39m(B[m 5[?12l[?25h[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h [?25l[?12l[?25h1[?25l[?12l[?25h5[?25l[?12l[?25h [?25l[1;82H(B[0;7m*[146G(B[m[?12l[?25h[2;12H[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[8d[K[?12l[?25h[2;12H[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h" [32m|[39m(B[m (B[0;1m[34mtail[35m -n[39m(B[m 5[2;13H[?25l[?12l[?25h[32m$[39m(B[m [32m|[39m(B[m (B[0;1m[34mtail[35m -n[39m(B[m 5[2;14H[?25l[?12l[?25h(B[0;1m[31m$1[39m(B[m [32m|[39m(B[m (B[0;1m[34mtail[35m -n[39m(B[m 5[2;15H[?25l[?12l[?25h(B[0;1m[33m"$1"[39m(B[m [32m|[39m(B[m (B[0;1m[34mtail[35m -n[39m(B[m 5[2;16H[?25l[9;17H[20X[9;37H(B[0;7mM-D(B[m DOS Format    [9;65H        (B[0;7mM-A(B[m Append[26X[9;109H(B[0;7mM-B(B[m Backup File[K[10;2H(B[0;7mC(B[m Cancel[17G[20X[10;37H(B[0;7mM-M(B[m Mac Format      [10;65H        (B[0;7mM-P(B[m Prepend[25X[10;109H(B[0;7m^T(B[m Browse[K[8d(B[0;7mFile Name to Write: middle.sh                                                                                                                      [8;30H(B[m[?12l[?25h[?25l[8;66H[1K (B[0;7m[ Writing... ](B[m[K[1;82H(B[0;7m [146G(B[m[8;66H(B[0;7m[ Wrote 1 line ](B[m[9;17H(B[0;7m^O(B[m Write Out    (B[0;7m^W(B[m Where Is     (B[0;7m^K(B[m Cut[9;65H(B[0;7m^T(B[m Execute      (B[0;7m^C(B[m Location     (B[0;7mM-U(B[m Undo        (B[0;7mM-A(B[m Set Mark    (B[0;7mM-](B[m To Bracket[10;2H(B[0;7mX(B[m Exit  [17G(B[0;7m^R(B[m Read File    (B[0;7m^\(B[m Replace      (B[0;7m^U(B[m Paste[10;65H(B[0;7m^J(B[m Justify      (B[0;7m^/(B[m Go To Line   (B[0;7mM-E(B[m Redo        (B[0;7mM-6(B[m Copy[10;129H(B[0;7m^Q(B[m Where Was[?12l[?25h[2;16H[?25l[8d[J[10d[?12l[?25h[10;1H[?1049l[23;0;0t[?1l>[?2004l[?2004h(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/alkanes[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/alkanes[00m$ [7mbash middle.sh octane.pdb[27mbash middle.sh octane.pdb
+[?2004lATOM      9  H           1      -4.502   0.681   0.785  1.00  0.00
+ATOM     10  H           1      -5.254  -0.243  -0.537  1.00  0.00
+ATOM     11  H           1      -4.357   1.252  -0.895  1.00  0.00
+ATOM     12  H           1      -3.009  -0.741  -1.467  1.00  0.00
+ATOM     13  H           1      -3.172  -1.337   0.206  1.00  0.00
+[?2004h(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/alkanes[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/alkanes[00m$ bash middle.sh octane.pdb[1P.pdb[1P.pdb[1P.pdb[1P.pdb[1P.pdb[1P.pdbp.pdbe.pdbn.pdbtane.pdb.pdb[1P.pdb[1P.pdb[1P.pdb[1Ppdb
+[?2004lATOM      9  H           1       1.324   0.350  -1.332  1.00  0.00
+ATOM     10  H           1       1.271   1.378   0.122  1.00  0.00
+ATOM     11  H           1      -0.074  -0.384   1.288  1.00  0.00
+ATOM     12  H           1      -0.048  -1.362  -0.205  1.00  0.00
+ATOM     13  H           1      -1.183   0.500  -1.412  1.00  0.00
+[?2004h(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/alkanes[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/alkanes[00m$ bash middle.sh pentane.pdb[1Poctane.pdb[6Psudo nano middle.sh
+[?2004l[?2004h[?1049h[22;0;0t[1;10r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[8;67H(B[0;7m[ Reading... ](B[m[8;73H(B[0;7m 1 line ](B[m[H(B[0;7m  GNU nano 6.2                                                         middle.sh                                                                   [1;146H(B[m[9d(B[0;7m^G(B[m Help[9;17H(B[0;7m^O(B[m Write Out    (B[0;7m^W(B[m Where Is     (B[0;7m^K(B[m Cut[9;65H(B[0;7m^T(B[m Execute[81G(B[0;7m^C(B[m Location     (B[0;7mM-U(B[m Undo[9;113H(B[0;7mM-A(B[m Set Mark    (B[0;7mM-](B[m To Bracket[10d(B[0;7m^X(B[m Exit[10;17H(B[0;7m^R(B[m Read File    (B[0;7m^\(B[m Replace[49G(B[0;7m^U(B[m Paste[10;65H(B[0;7m^J(B[m Justify[81G(B[0;7m^/(B[m Go To Line   (B[0;7mM-E(B[m Redo[10;113H(B[0;7mM-6(B[m Copy[10;129H(B[0;7m^Q(B[m Where Was[2d(B[0;1m[34mhead[35m -n[39m(B[m 15 (B[0;1m[33m"$1"[39m(B[m [32m|[39m(B[m (B[0;1m[34mtail[35m -n[39m(B[m 5[?12l[?25h[?25l[8d[K[1;82H(B[0;7m*[146G(B[m[2d[36m# Select lines from the middle of a file.[3d# Usage: bash middle.sh filename end_line num_lines[4d(B[0;1m[34mhead[35m -n[39m(B[m (B[0;1m[33m"$2"[39m(B[m (B[0;1m[33m"$1"[39m(B[m [32m|[39m(B[m (B[0;1m[34mtail[35m -n[39m(B[m (B[0;1m[33m"$3"[34mhead[35m -n[39m(B[m 15 (B[0;1m[33m"$1"[39m(B[m [32m|[39m(B[m (B[0;1m[34mtail[35m -n[39m(B[m 5[4;33H[?12l[?25h[?25l[9;17H[20X[9;37H(B[0;7mM-D(B[m DOS Format    [9;65H        (B[0;7mM-A(B[m Append[26X[9;109H(B[0;7mM-B(B[m Backup File[K[10;2H(B[0;7mC(B[m Cancel[17G[20X[10;37H(B[0;7mM-M(B[m Mac Format      [10;65H        (B[0;7mM-P(B[m Prepend[25X[10;109H(B[0;7m^T(B[m Browse[K[8d(B[0;7mFile Name to Write: middle.sh                                                                                                                      [8;30H(B[m[?12l[?25h[?25l[8;66H[1K (B[0;7m[ Writing... ](B[m[K[1;82H(B[0;7m [146G(B[m[8;66H(B[0;7m[ Wrote 3 lines ](B[m[9;17H(B[0;7m^O(B[m Write Out    (B[0;7m^W(B[m Where Is     (B[0;7m^K(B[m Cut[9;65H(B[0;7m^T(B[m Execute      (B[0;7m^C(B[m Location     (B[0;7mM-U(B[m Undo        (B[0;7mM-A(B[m Set Mark    (B[0;7mM-](B[m To Bracket[10;2H(B[0;7mX(B[m Exit  [17G(B[0;7m^R(B[m Read File    (B[0;7m^\(B[m Replace      (B[0;7m^U(B[m Paste[10;65H(B[0;7m^J(B[m Justify      (B[0;7m^/(B[m Go To Line   (B[0;7mM-E(B[m Redo        (B[0;7mM-6(B[m Copy[10;129H(B[0;7m^Q(B[m Where Was[?12l[?25h[4;33H[?25l[8d[J[10d[?12l[?25h[10;1H[?1049l[23;0;0t[?1l>[?2004l[?2004h(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/alkanes[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/alkanes[00m$ 
+[?2004l[?2004h(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/alkanes[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/alkanes[00m$ [7m wc -l *.pdb | sort -n[27m wc -l *.pdb | sort -n
+[?2004l   9 methane.pdb
+  12 ethane.pdb
+  15 propane.pdb
+  20 cubane.pdb
+  21 pentane.pdb
+  30 octane.pdb
+ 107 total
+[?2004h(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/alkanes[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/alkanes[00m$ sudo nano sorted.sh
+[?2004l[?2004h[?1049h[22;0;0t[1;10r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[8;68H(B[0;7m[ New File ](B[m[H(B[0;7m  GNU nano 6.2                                                         sorted.sh                                                                   [1;146H(B[m[9d(B[0;7m^G(B[m Help[9;17H(B[0;7m^O(B[m Write Out    (B[0;7m^W(B[m Where Is     (B[0;7m^K(B[m Cut[9;65H(B[0;7m^T(B[m Execute[81G(B[0;7m^C(B[m Location     (B[0;7mM-U(B[m Undo[9;113H(B[0;7mM-A(B[m Set Mark    (B[0;7mM-](B[m To Bracket[10d(B[0;7m^X(B[m Exit[10;17H(B[0;7m^R(B[m Read File    (B[0;7m^\(B[m Replace[49G(B[0;7m^U(B[m Paste[10;65H(B[0;7m^J(B[m Justify[81G(B[0;7m^/(B[m Go To Line   (B[0;7mM-E(B[m Redo[10;113H(B[0;7mM-6(B[m Copy[10;129H(B[0;7m^Q(B[m Where Was[2d[?12l[?25h[?25l[8d[K[1;82H(B[0;7m*[146G(B[m[2d[36m# Sort files by their length.[3d# Usage: bash sorted.sh one_or_more_filenames[4d[39m(B[mwc(B[0;1m[35m -l[39m(B[m (B[0;1m[33m"$@"[39m(B[m [32m|[39m(B[m (B[0;1m[34msort[35m -n[39m(B[m[?12l[?25h[?25l[9;17H[20X[9;37H(B[0;7mM-D(B[m DOS Format    [9;65H        (B[0;7mM-A(B[m Append[26X[9;109H(B[0;7mM-B(B[m Backup File[K[10;2H(B[0;7mC(B[m Cancel[17G[20X[10;37H(B[0;7mM-M(B[m Mac Format      [10;65H        (B[0;7mM-P(B[m Prepend[25X[10;109H(B[0;7m^T(B[m Browse[K[8d(B[0;7mFile Name to Write: sorted.sh                                                                                                                      [8;30H(B[m[?12l[?25h[?25l[8;66H[1K (B[0;7m[ Writing... ](B[m[K[1;82H(B[0;7m [146G(B[m[8;66H(B[0;7m[ Wrote 3 lines ](B[m[9;17H(B[0;7m^O(B[m Write Out    (B[0;7m^W(B[m Where Is     (B[0;7m^K(B[m Cut[9;65H(B[0;7m^T(B[m Execute      (B[0;7m^C(B[m Location     (B[0;7mM-U(B[m Undo        (B[0;7mM-A(B[m Set Mark    (B[0;7mM-](B[m To Bracket[10;2H(B[0;7mX(B[m Exit  [17G(B[0;7m^R(B[m Read File    (B[0;7m^\(B[m Replace      (B[0;7m^U(B[m Paste[10;65H(B[0;7m^J(B[m Justify      (B[0;7m^/(B[m Go To Line   (B[0;7mM-E(B[m Redo        (B[0;7mM-6(B[m Copy[10;129H(B[0;7m^Q(B[m Where Was[?12l[?25h[4;21H[?25l[8d[J[10d[?12l[?25h[10;1H[?1049l[23;0;0t[?1l>[?2004l[?2004h(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/alkanes[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/alkanes[00m$ bash sorted.sh *.pdb ../creatures/*.dat
+[?2004l    9 methane.pdb
+   12 ethane.pdb
+   15 propane.pdb
+   20 cubane.pdb
+   21 pentane.pdb
+   30 octane.pdb
+  163 ../creatures/basilisk.dat
+  163 ../creatures/minotaur.dat
+  163 ../creatures/original-basilisk.dat
+  163 ../creatures/original-minotaur.dat
+  163 ../creatures/original-unicorn.dat
+  163 ../creatures/unicorn.dat
+ 1085 total
+[?2004h(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/alkanes[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/alkanes[00m$ history | tail -n 5 > redo-si[K[Kfigure-3.as[K[Ksh
+[?2004lbash: redo-figure-3.sh: Permission denied
+[?2004h(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/alkanes[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/alkanes[00m$ history | tail -n 5 > redo-figure-3.sh[1@s[1@u[1@d[1@o[1@ 
+[?2004lbash: redo-figure-3.sh: Permission denied
+sudo: history: command not found
+[?2004h(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/alkanes[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/alkanes[00m$ cd
+[?2004l[?2004h(base) ]0;badhri@TIGER01766: ~[01;32mbadhri@TIGER01766[00m:[01;34m~[00m$ 
+[?2004l[?2004h(base) ]0;badhri@TIGER01766: ~[01;32mbadhri@TIGER01766[00m:[01;34m~[00m$ cd shell-lesson-data/exercise-data/writing/
+[?2004l[?2004h(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/writing[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/writing[00m$ cat haiku.txt
+[?2004lThe Tao that is seen
+Is not the true Tao, until
+You bring fresh toner.
+
+With searching comes loss
+and the presence of absence:
+"My Thesis" not found.
+
+Yesterday it worked
+Today it is not working
+Software is like that.
+[?2004h(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/writing[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/writing[00m$ grep not haiku.txt
+[?2004lIs [01;31m[Knot[m[K the true Tao, until
+"My Thesis" [01;31m[Knot[m[K found.
+Today it is [01;31m[Knot[m[K working
+[?2004h(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/writing[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/writing[00m$ grep -n "it" haiku.txt
+[?2004l[32m[K5[m[K[36m[K:[m[KW[01;31m[Kit[m[Kh searching comes loss
+[32m[K9[m[K[36m[K:[m[KYesterday [01;31m[Kit[m[K worked
+[32m[K10[m[K[36m[K:[m[KToday [01;31m[Kit[m[K is not working
+[?2004h(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/writing[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/writing[00m$ grep -n "it" haiku.txt[1P[1P[1@t[1@h[1@e[1@-[1@w[1@ 
+[?2004l[32m[K2[m[K[36m[K:[m[KIs not [01;31m[Kthe[m[K true Tao, until
+[32m[K6[m[K[36m[K:[m[Kand [01;31m[Kthe[m[K presence of absence:
+[?2004h(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/writing[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/writing[00m$ grep -n -w "the" haiku.txt[1@-[1@i[1@ 
+[?2004l[32m[K1[m[K[36m[K:[m[K[01;31m[KThe[m[K Tao that is seen
+[32m[K2[m[K[36m[K:[m[KIs not [01;31m[Kthe[m[K true Tao, until
+[32m[K6[m[K[36m[K:[m[Kand [01;31m[Kthe[m[K presence of absence:
+[?2004h(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/writing[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/writing[00m$ grep -n -w -i "the" haiku.txt[C[1P[1@v
+[?2004l[32m[K1[m[K[36m[K:[m[KThe Tao that is seen
+[32m[K3[m[K[36m[K:[m[KYou bring fresh toner.
+[32m[K4[m[K[36m[K:[m[K
+[32m[K5[m[K[36m[K:[m[KWith searching comes loss
+[32m[K7[m[K[36m[K:[m[K"My Thesis" not found.
+[32m[K8[m[K[36m[K:[m[K
+[32m[K9[m[K[36m[K:[m[KYesterday it worked
+[32m[K10[m[K[36m[K:[m[KToday it is not working
+[32m[K11[m[K[36m[K:[m[KSoftware is like that.
+[?2004h(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/writing[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/writing[00m$ grep -r Yesterday .
+[?2004l[35m[K./haiku.txt[m[K[36m[K:[m[K[01;31m[KYesterday[m[K it worked
+[35m[K./LittleWomen.txt[m[K[36m[K:[m[K"[01;31m[KYesterday[m[K, when Aunt was asleep and I was trying to be as still as a
+[35m[K./LittleWomen.txt[m[K[36m[K:[m[K[01;31m[KYesterday[m[K at dinner, when an Austrian officer stared at us and then
+[35m[K./LittleWomen.txt[m[K[36m[K:[m[K[01;31m[KYesterday[m[K was a quiet day spent in teaching, sewing, and writing in my
+[?2004h(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/writing[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/writing[00m$ grep -E "^.o" haiku.txt
+[?2004l[01;31m[KYo[m[Ku bring fresh toner.
+[01;31m[KTo[m[Kday it is not working
+[01;31m[KSo[m[Kftware is like that.
+[?2004h(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/writing[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/writing[00m$ find .
+[?2004l.
+./haiku.txt
+./backup
+./haiku.txt:Zone.Identifier
+./LittleWomen.txt
+./LittleWomen.txt:Zone.Identifier
+./,,
+./,,/project
+./,,/project/data
+./thesis_backup
+./thesis_backup/quotes.txt
+[?2004h(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-data/writing[01;32mbadhri@TIGER01766[00m:[01;34m~/shell-lesson-data/exercise-data/writing[00m$ find . -type d
+[?2004l.
+./backup
+./,,
+./,,/project
+./,,/project/data
+./thesis_backup
+[?2004h(base) ]0;badhri@TIGER01766: ~/shell-lesson-data/exercise-dat
