@@ -15,7 +15,7 @@ sys.path.insert(0, os.path.abspath(".."))
 from src.log_config import configure_logger
 
 
-def parse_args():
+def parse_args(arg):
     """Gets Command line arguments
 
     Returns
@@ -54,7 +54,7 @@ def parse_args():
         default="INFO",
         type=str,
     )
-    args = parser.parse_args()
+    args = parser.parse_args(arg)
     return args
 
 
@@ -243,6 +243,6 @@ def main():
 
 
 if __name__ == "__main__":
-    args = parse_args()
+    args = parse_args(sys.argv[1:])
     logger = create_logger(args.log_dir, args.log_level)
     main()
