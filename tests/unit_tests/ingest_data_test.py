@@ -26,6 +26,9 @@ class TestDataIngestion(unittest.TestCase):
                 "INFO",
             ]
         )
+        ingest_data.logger = ingest_data.create_logger(
+            ingest_data.args.log_dir, ingest_data.args.log_level
+        )
         DOWNLOAD_ROOT = (
             "https://raw.githubusercontent.com/ageron/handson-ml/master/"
         )
@@ -40,7 +43,7 @@ class TestDataIngestion(unittest.TestCase):
                 ),
             ]
         )
-        self.assertTrue(os.path.exists(args.data_dir), msg=str(os.getcwd()))
+        self.assertTrue(os.path.exists(args.data_dir))
         # self.assertTrue(os.path.exists(log_dir))
 
     def test_fetch_housing_data(self):
@@ -48,22 +51,37 @@ class TestDataIngestion(unittest.TestCase):
         # Test for return type of fetch_housing_data
         assert type(df) == pd.core.frame.DataFrame
 
-    # def test_data_prep(self):
-    #     df = ingest_data.load_housing_data()
-    #     df = ingest_data.data_prep(df)
-    #     # Test for return type of load_housing_data
-    #     assert type(df) == pd.core.frame.DataFrame
+    def test_split_data(self):
+        df = ingest_data.fetch_housing_data(self.HOUSING_URL)
+        split_df = ingest_data.split_data(df)
+        # Test for return type of load_housing_data
+        assert type(split_df) == pd.core.frame.DataFrame
+        self.assertTrue(len(split_df) < len(df))
 
-    # def test_split_method_compare(self):
-    #     df = ingest_data.load_housing_data()
-    #     df = ingest_data.data_prep(df)
-    #     dfs = ingest_data.split_method_compare(df)
-    #     # Test for return type of load_housing_data
-    #     assert len(dfs) == 3
+    def test_process_data(self):
+        df = ingest_data.fetch_housing_data(self.HOUSING_URL)
+        split_df = ingest_data.split_data(df)
+        prep_df = ingest_data.process_data(split_df)
+        # Test for return type of load_housing_data
+        assert type(prep_df) == pd.core.frame.DataFrame
+        self.assertTrue(prep_df.shape[1] > df.shape[1])
 
-    # def test_rawdata_generated(self):
-    #     housing_raw = os.path.join(ingest_data.HOUSING_PATH, "housing.csv")
-    #     self.assertTrue(os.path.exists(housing_raw))
+    def test_store_dataset(self):
+        df = ingest_data.fetch_housing_data(self.HOUSING_URL)
+        split_df = ingest_data.split_data(df)
+        prep_df = ingest_data.process_data(split_df)
+        ingest_data.store_dataset(
+            prep_df,
+            split_df,
+            ingest_data.args.data_dir + "/processed",
+            "/training_set.csv",
+        )
+        # Test for return type of load_housing_data
+        self.assertTrue(
+            os.path.exists(
+                ingest_data.args.data_dir + "/processed" + "/training_set.csv"
+            )
+        )
 
 
 if __name__ == "__main__":

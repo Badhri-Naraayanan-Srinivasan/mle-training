@@ -83,6 +83,7 @@ def create_logger(logs_folder, log_level):
         + ").log",
         log_level=log_level,
     )
+    print(logger)
     return logger
 
 
@@ -167,7 +168,6 @@ def split_data(housing):
         args.data_dir + "/raw",
         "/testing_set.csv",
     )
-    logger.debug("Testing Data Storing : Completed")
     return strat_train_set
 
 
@@ -227,9 +227,11 @@ def main():
     HOUSING_URL = DOWNLOAD_ROOT + "datasets/housing/housing.tgz"
     # Fetch raw data
     housing = fetch_housing_data(housing_url=HOUSING_URL)
+    print(housing.head())
     logger.debug("Raw data Fetching : Completed")
     # Split raw data
     housing = split_data(housing)
+
     # Preprocess raw train data
     housing_prepared = process_data(housing)
     # Store processed train data
