@@ -8,6 +8,9 @@ scipy==1.10.1
 scikit-learn==1.2.2
 argpars==1.4.0
 Sphinx==7.0.1
+setuptools==67.8.0
+build==0.10.0
+pyproject_hooks==1.0.0
 sphinx_rtd_theme
 xtarfile
 urllib3
