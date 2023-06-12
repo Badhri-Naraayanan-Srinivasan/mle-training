@@ -1,18 +1,37 @@
 # Median housing value prediction
 
-The housing data can be downloaded from https://raw.githubusercontent.com/ageron/handson-ml/master/. The script has codes to download the data. We have modelled the median house value on given housing data. 
+# Pre-requisites
 
-The following techniques have been used: 
+* Ensure you have `Miniconda` installed and can be run from your shell. If not, download the installer for your platform here: https://docs.conda.io/en/latest/miniconda.html
 
- - Linear regression
- - Decision Tree
- - Random Forest
+     **NOTE**
 
-## Steps performed
- - We prepare and clean the data. We check and impute for missing values.
- - Features are generated and the variables are checked for correlation.
- - Multiple sampling techinuqies are evaluated. The data set is split into train and test.
- - All the above said modelling techniques are tried and evaluated. The final metric used to evaluate is mean squared error.
+     * If you already have `Anaconda` installed, pls. still go ahead and install `Miniconda` and use it for development.
+     * If `conda` cmd is not in your path, you can configure your shell by running `conda init`.
 
-## To excute the script
-python nonstandardcode.py
+
+# Getting started
+
+* [Download the repo from gdrive](https://drive.google.com/file/d/177NngnW6GVhzq6psKj7FX45YEKqJq65K/view?usp=sharing), unzip and switch to the root folder
+
+* Setup a development environment and switch to it by running:
+```
+(base):~/$ conda env create -f deploy/conda/env.yml
+(base):~/$ conda activate mle-dev
+```
+
+The above command should create a conda python environment named `mle-dev`
+
+In case of installation issues, remove and recreate. You can remove by running:
+```
+(base):~/$ conda remove --name mle-dev --all -y
+```
+
+# Procedure to run the code
+
+- conda env create -f deploy/conda/env.yml
+- conda activate mle-dev
+- cd src
+- python ingest_data.py
+- python train.py
+- python score.py
