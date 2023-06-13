@@ -1,6 +1,5 @@
 import argparse
 import os
-import pickle
 import sys
 import tarfile
 import urllib.request
@@ -8,8 +7,15 @@ from datetime import datetime
 
 import numpy as np
 import pandas as pd
+import yaml
+from sklearn.base import BaseEstimator, TransformerMixin
+from sklearn.compose import ColumnTransformer
 from sklearn.impute import SimpleImputer
+from sklearn.impute._base import _BaseImputer
 from sklearn.model_selection import StratifiedShuffleSplit
+from sklearn.pipeline import Pipeline
+from sklearn.preprocessing import OneHotEncoder
+from sklearn.utils.validation import check_array, check_is_fitted
 
 sys.path.insert(0, os.path.abspath(".."))
 from src.log_config import configure_logger
@@ -83,7 +89,6 @@ def create_logger(logs_folder, log_level):
         + ").log",
         log_level=log_level,
     )
-    print(logger)
     return logger
 
 
@@ -112,7 +117,7 @@ def fetch_housing_data(housing_url):
     return pd.read_csv(os.path.join(args.data_dir, "raw", "housing.csv"))
 
 
-def store_dataset(housing, strat_data, path, file_name):
+def store_dataset(housing, path, file_name):
     """Stores Output DataFrame to user defined path
 
     Parameters
@@ -127,7 +132,7 @@ def store_dataset(housing, strat_data, path, file_name):
         name of the csv file
     """
     os.makedirs(path, exist_ok=True)
-    housing.loc[strat_data.index].to_csv(path + file_name)
+    housing.to_csv(path + file_name)
 
 
 def split_data(housing):
@@ -161,17 +166,192 @@ def split_data(housing):
     for set_ in (strat_train_set, strat_test_set, housing):
         set_.drop("income_cat", axis=1, inplace=True)
 
-    # Store raw test dataset
-    store_dataset(
-        housing,
-        strat_test_set,
-        args.data_dir + "/raw",
-        "/testing_set.csv",
-    )
-    return strat_train_set
+    return strat_train_set, strat_test_set
 
 
-def process_data(housing):
+class Imputer(_BaseImputer, TransformerMixin):
+    """
+    Impute data based on the method passed in the config.
+
+    Parameters
+    ----------
+        data: pd.DataFrame
+            input data frame to be imputed
+        num_impute: str, default mean
+            numerical imputation method
+        cat_impute: str, default mode
+            categorical imputation method
+        num_constant: numeric
+            numerical constant to use when the num_imputer is constant
+        cat_constant: str
+            categorical constant to use when the cat_imputer is constant
+    """
+
+    def __init__(self, cfg):
+        if cfg["IMPUTE"]["NUMERICAL_CONSTANT"] is not None:
+            num_impute = "constant"
+        else:
+            num_impute = cfg["IMPUTE"]["NUMERICAL_STRATEGY"]
+
+        if cfg["IMPUTE"]["CATEGORICAL_CONSTANT"] is not None:
+            cat_impute = "constant"
+        else:
+            cat_impute = cfg["IMPUTE"]["CATEGORICAL_STRATEGY"]
+
+        num_constant = cfg["IMPUTE"]["NUMERICAL_CONSTANT"]
+        cat_constant = cfg["IMPUTE"]["CATEGORICAL_CONSTANT"]
+        missing_values = np.nan
+        add_indicator = cfg["IMPUTE"]["ADD_INDICATOR"]
+
+        super().__init__(
+            missing_values=missing_values, add_indicator=add_indicator
+        )
+        self.num_impute = num_impute
+        self.cat_impute = cat_impute
+        self.num_constant = num_constant
+        self.cat_impute = cat_impute
+        self.cat_constant = cat_constant
+
+    def fit(self, X, y=None):
+        check_array(
+            X,
+            accept_large_sparse=False,
+            dtype=object,
+            force_all_finite="allow-nan",
+        )
+        self.dtype_dict_ = X.dtypes
+        if self.num_impute == "constant":
+            self.num_imputer_ = SimpleImputer(
+                strategy=self.num_impute, fill_value=self.num_constant
+            )
+        else:
+            self.num_imputer_ = SimpleImputer(strategy=self.num_impute)
+
+        if self.cat_impute == "constant":
+            self.cat_imputer_ = SimpleImputer(
+                strategy=self.cat_impute, fill_value=self.cat_constant
+            )
+        else:
+            self.cat_imputer_ = SimpleImputer(strategy=self.cat_impute)
+        self.num_cols_ = list(X.select_dtypes(include=np.number).columns)
+        self.cat_cols_ = list(X.select_dtypes(exclude=np.number).columns)
+        self.imputer_ = ColumnTransformer(
+            transformers=[
+                ("num", self.num_imputer_, self.num_cols_),
+                ("cat", self.cat_imputer_, self.cat_cols_),
+            ]
+        )
+        self.imputer_.fit(X)
+        self.is_fitted_ = True
+        return self
+
+    def transform(self, X, y=None):
+        check_is_fitted(self, "is_fitted_")
+        X = self.imputer_.transform(X)
+        X = pd.DataFrame(X, columns=self.num_cols_ + self.cat_cols_)
+        X = X.astype(self.dtype_dict_)
+        return X
+
+    def impute(
+        data,
+        num_impute="mean",
+        cat_impute="most_frequent",
+        num_constant=None,
+        cat_constant=None,
+    ):
+        """
+        Impute data based on the method.
+
+        Parameters
+        ----------
+            data: pd.DataFrame
+                input data frame to be imputed
+            num_impute: str, default mean
+                numerical imputation method
+            cat_impute: str, default mode
+                categorical imputation method
+            num_constant: numeric
+                numerical constant to use when the num_imputer is constant
+            cat_constant: str
+                categorical constant to use when the cat_imputer is constant
+        Returns
+        -------
+            data: pd.DataFrame
+                input data frame to be imputed
+            imputer: object
+                imputer object
+
+        """
+        dtype_dict = data.dtypes
+        if num_constant is None:
+            num_imputer = SimpleImputer(strategy=num_impute)
+        else:
+            if isinstance(num_constant, int):
+                num_imputer = SimpleImputer(
+                    strategy="constant", fill_value=num_constant
+                )
+
+        if cat_constant is not None:
+            cat_imputer = SimpleImputer(
+                strategy="constant", fill_value=cat_constant
+            )
+        else:
+            cat_imputer = SimpleImputer(strategy=cat_impute)
+
+        num_cols = list(data.select_dtypes(include=np.number).columns)
+        cat_cols = list(data.select_dtypes(exclude=np.number).columns)
+        # logger.info("INFO: numerical columns imputation: {}".format(num_cols))
+        # logger.info("INFO: cateogrical columns imputation: {}".format(cat_cols))
+        imputer = ColumnTransformer(
+            transformers=[
+                ("num", num_imputer, num_cols),
+                ("cat", cat_imputer, cat_cols),
+            ]
+        )
+        imputer.fit(data)
+        data = imputer.transform(data)
+        data = pd.DataFrame(data, columns=num_cols + cat_cols)
+        data = data.astype(dtype_dict)
+        return data, imputer
+
+
+class CombinedAttributesAdder(BaseEstimator, TransformerMixin):
+    def __init__(self):  # no *args or **kargs
+        return None
+
+    def fit(self, X, y=None):
+        self._cols = list(X.columns)
+        self._household_ix = self._cols.index("households")
+        self._population_ix = self._cols.index("population")
+        self._bedrooms_ix = self._cols.index("total_bedrooms")
+        self._rooms_ix = self._cols.index("total_rooms")
+
+        self._cols += [
+            "rooms_per_household",
+            "population_per_household",
+            "bedrooms_per_room",
+        ]
+        return self
+
+    def transform(self, X, y=None):
+        X = X.values
+        rooms_per_household = X[:, self._rooms_ix] / X[:, self._household_ix]
+        population_per_household = (
+            X[:, self._population_ix] / X[:, self._household_ix]
+        )
+        bedrooms_per_room = X[:, self._bedrooms_ix] / X[:, self._rooms_ix]
+        return pd.DataFrame(
+            np.c_[
+                X,
+                rooms_per_household,
+                population_per_household,
+                bedrooms_per_room,
+            ],
+            columns=self._cols,
+        )
+
+
+def process_data(housing, test):
     """Preprocess the raw data
 
     Parameters
@@ -182,42 +362,79 @@ def process_data(housing):
     Returns
     -------
     DataFrame
-        PReprocessed Dataframe
+        Preprocessed Dataframe
     """
-    # Create simple imputer object
-    imputer = SimpleImputer(strategy="median")
-
-    housing_num = housing.drop("ocean_proximity", axis=1)
-
-    imputer.fit(housing_num)
-    os.makedirs(args.data_dir, exist_ok=True)
-    # Save imputer fit object
-    with open(args.data_dir + "/imputer.pickle", "wb") as file:
-        pickle.dump(imputer, file)
-
-    X = imputer.transform(housing_num)
-    logger.debug("Training Data Numerical Impute : Completed")
-    logger.debug("Training Data Imputer pickle Storing : Completed")
-    housing_tr = pd.DataFrame(
-        X, columns=housing_num.columns, index=housing.index
+    cat_cols = list(housing.select_dtypes(exclude=np.number).columns)
+    pl = Pipeline(
+        [
+            (
+                "imputer",
+                Imputer(master_cfg),
+            ),
+            (
+                "attribs_adder",
+                CombinedAttributesAdder(),
+            ),
+            (
+                "label_endcode",
+                ColumnTransformer(
+                    transformers=[
+                        (
+                            "onehot_encoder",
+                            OneHotEncoder(sparse=False),
+                            cat_cols,
+                        )
+                    ],
+                    remainder="passthrough",
+                ),
+            ),
+        ]
     )
-    # Create new features for the model
-    housing_tr["rooms_per_household"] = (
-        housing_tr["total_rooms"] / housing_tr["households"]
+    housing_prepared = pd.DataFrame(
+        pl.fit_transform(housing),
+        columns=[
+            "<1H OCEAN",
+            "INLAND",
+            "ISLAND",
+            "NEAR BAY",
+            "NEAR OCEAN",
+            "longitude",
+            "latitude",
+            "housing_median_age",
+            "total_rooms",
+            "total_bedrooms",
+            "population",
+            "households",
+            "median_income",
+            "median_house_value",
+            "rooms_per_household",
+            "population_per_household",
+            "bedrooms_per_room",
+        ],
     )
-    housing_tr["bedrooms_per_room"] = (
-        housing_tr["total_bedrooms"] / housing_tr["total_rooms"]
+    test_prepared = pd.DataFrame(
+        pl.transform(test),
+        columns=[
+            "<1H OCEAN",
+            "INLAND",
+            "ISLAND",
+            "NEAR BAY",
+            "NEAR OCEAN",
+            "longitude",
+            "latitude",
+            "housing_median_age",
+            "total_rooms",
+            "total_bedrooms",
+            "population",
+            "households",
+            "median_income",
+            "median_house_value",
+            "rooms_per_household",
+            "population_per_household",
+            "bedrooms_per_room",
+        ],
     )
-    housing_tr["population_per_household"] = (
-        housing_tr["population"] / housing_tr["households"]
-    )
-
-    housing_cat = housing[["ocean_proximity"]]
-    housing_prepared = housing_tr.join(
-        pd.get_dummies(housing_cat, drop_first=True)
-    )
-    logger.debug("Training Data Preprocessing : Completed")
-    return housing_prepared
+    return housing_prepared, test_prepared
 
 
 def main():
@@ -227,19 +444,23 @@ def main():
     HOUSING_URL = DOWNLOAD_ROOT + "datasets/housing/housing.tgz"
     # Fetch raw data
     housing = fetch_housing_data(housing_url=HOUSING_URL)
-    print(housing.head())
     logger.debug("Raw data Fetching : Completed")
     # Split raw data
-    housing = split_data(housing)
+    housing, test = split_data(housing)
 
     # Preprocess raw train data
-    housing_prepared = process_data(housing)
+    housing_prepared, test_prepared = process_data(housing, test)
     # Store processed train data
     store_dataset(
         housing_prepared,
-        housing,
         args.data_dir + "/processed",
         "/training_set.csv",
+    )
+    # Store raw test dataset
+    store_dataset(
+        test_prepared,
+        args.data_dir + "/processed",
+        "/testing_set.csv",
     )
     logger.debug("Training Data Storing : Completed")
 
@@ -247,4 +468,16 @@ def main():
 if __name__ == "__main__":
     args = parse_args(sys.argv[1:])
     logger = create_logger(args.log_dir, args.log_level)
+    config_path = "./config.yml"
+    with open(config_path, "r") as file:
+        master_cfg = yaml.full_load(file)
+    # master_cfg = yaml.load(config_path)
+
+    for key_ in master_cfg:
+        try:
+            key_, value_ = key_, master_cfg[key_].format(**master_cfg)
+            master_cfg[key_] = value_
+        except Exception as e:
+            type(e)  # to avoid flake8 error
+            key_, value_ = key_, master_cfg[key_]
     main()

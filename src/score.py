@@ -26,7 +26,7 @@ def parse_args():
     """
     # Default Data path
     DATA_PATH = os.path.join(
-        "..", "data", "datasets", "housing", "raw", "testing_set.csv"
+        "..", "data", "datasets", "housing", "processed", "testing_set.csv"
     )
     # Default Model path
     ARTIFACT_PATH = os.path.join("..", "artifacts")
@@ -95,7 +95,7 @@ def create_logger(logs_folder, log_level):
 
 
 def get_prepared_test_data():
-    """Fetches raw test data and preprocess it
+    """Fetches preprocess data
 
     Returns
     -------
@@ -109,32 +109,8 @@ def get_prepared_test_data():
     test_data = pd.read_csv(args.data_dir).drop(columns="Unnamed: 0")
     logger.debug("Testing Data Fetching : Complete")
     target = "median_house_value"
-    # Impute numerical columns
-    X_test_num = test_data.drop("ocean_proximity", axis=1)
-    with open(args.artifact_dir + "/imputer.pickle", "rb") as file:
-        imputer = pickle.load(file)
-    X_test_prepared = imputer.transform(X_test_num)
 
-    X_test_prepared = pd.DataFrame(X_test_prepared, columns=X_test_num.columns)
-    X_test_prepared = X_test_prepared.drop(target, axis=1)
-    y_test = test_data[target].copy()
-    # Engineer new feature
-    X_test_prepared["rooms_per_household"] = (
-        X_test_prepared["total_rooms"] / X_test_prepared["households"]
-    )
-    X_test_prepared["bedrooms_per_room"] = (
-        X_test_prepared["total_bedrooms"] / X_test_prepared["total_rooms"]
-    )
-    X_test_prepared["population_per_household"] = (
-        X_test_prepared["population"] / X_test_prepared["households"]
-    )
-
-    X_test_cat = test_data[["ocean_proximity"]]
-    # Encoding categorical columns
-    X_test_prepared = X_test_prepared.join(
-        pd.get_dummies(X_test_cat, drop_first=True)
-    )
-    return X_test_prepared, y_test
+    return test_data.drop(columns=target), test_data[target]
 
 
 def score_models(X_test, y_test):
