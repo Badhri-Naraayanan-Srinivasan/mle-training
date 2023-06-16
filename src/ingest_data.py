@@ -1,10 +1,13 @@
 import argparse
 import os
+import pickle
 import sys
 import tarfile
 import urllib.request
 from datetime import datetime
 
+import mlflow
+import mlflow.sklearn
 import numpy as np
 import pandas as pd
 import yaml
@@ -59,6 +62,11 @@ def parse_args(arg):
         help="Enter Log level: 'DEBUG' to write logs, default: 'INFO'",
         default="INFO",
         type=str,
+    )
+    parser.add_argument(
+        "--mlflow-run_id",
+        default=False,
+        help="specify the run_id for the run, if you want to save the file in mlflow",
     )
     args = parser.parse_args(arg)
     return args
@@ -390,6 +398,17 @@ def process_data(housing, test):
             ),
         ]
     )
+    pickle.dump(
+        pl,
+        open(
+            os.path.join(
+                "..",
+                "artifacts",
+                "pipeline_{DATA_VERSION}.pkl".format(**master_cfg),
+            ),
+            "wb",
+        ),
+    )
     housing_prepared = pd.DataFrame(
         pl.fit_transform(housing),
         columns=[
@@ -454,14 +473,37 @@ def main():
     store_dataset(
         housing_prepared,
         args.data_dir + "/processed",
-        "/training_set.csv",
+        "/train_{DATA_VERSION}.csv".format(**master_cfg),
     )
     # Store raw test dataset
     store_dataset(
         test_prepared,
         args.data_dir + "/processed",
-        "/testing_set.csv",
+        "/test_{DATA_VERSION}.csv".format(**master_cfg),
     )
+    if args.mlflow_run_id:  # master_cfg["MLFLOW"]["LOG_INTO_MLFLOW"]:
+        with mlflow.start_run(run_id=args.mlflow_run_id) as run:
+            mlflow.log_artifact(
+                os.path.join(
+                    master_cfg["PROCESSED_DATA_PATH"],
+                    "train_{DATA_VERSION}.csv".format(**master_cfg),
+                )
+            )
+            mlflow.log_artifact(
+                os.path.join(
+                    master_cfg["PROCESSED_DATA_PATH"],
+                    "test_{DATA_VERSION}.csv".format(**master_cfg),
+                )
+            )
+            mlflow.log_artifact(
+                os.path.join(
+                    master_cfg["PROCESSED_MODELS_PATH"],
+                    "pipeline_{DATA_VERSION}.pkl".format(**master_cfg),
+                )
+            )
+        print("logged in mlflow")
+        mlflow.end_run()
+
     logger.debug("Training Data Storing : Completed")
 
 

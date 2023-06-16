@@ -1,10 +1,10 @@
 DOWNLOAD_ROOT: "https://raw.githubusercontent.com/ageron/handson-ml/master/"
 HOUSING_PATH: "../datasets/housing/raw"
 HOUSING_URL: "{DOWNLOAD_ROOT}/datasets/housing/housing.tgz"
-DATA_PATH: "/home/tiger0498/mle-training/mle-training"
-PROCESSED_DATA_PATH: "{DATA_PATH}/datasets/housing/processed"
+DATA_PATH: "/home/badhri/mle_training"
+PROCESSED_DATA_PATH: "{DATA_PATH}/data/datasets/housing/processed"
 PROCESSED_MODELS_PATH: "{DATA_PATH}/artifacts/"
-DATA_VERSION: 5
+DATA_VERSION: 1
 OVERWRITE: TRUE
 
 TRAIN_TEST_SPLIT:
@@ -43,6 +43,6 @@ MODELLING:
 MLFLOW:
   LOG_INTO_MLFLOW: True
   REMOTE_SERVER_URI: "http://0.0.0.0:5000"
-  EXPERIMENT_NAME: 'Test_Housing_2_'
+  EXPERIMENT_NAME: 'Test_Housing_'
 
 
