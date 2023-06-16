@@ -4,7 +4,9 @@ import pickle
 import sys
 from datetime import datetime
 
+import mlflow
 import pandas as pd
+import yaml
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import GridSearchCV
@@ -62,6 +64,11 @@ def parse_args():
         help="Enter Log level: 'DEBUG' to write logs, default: 'INFO'",
         default="INFO",
         type=str,
+    )
+    parser.add_argument(
+        "--mlflow-run_id",
+        default=False,
+        help="specify the run_id for the run, if you want to save the file in mlflow",
     )
     args = parser.parse_args()
 
@@ -139,10 +146,46 @@ def fit_models(model_data):
 
     # Saving the models with Pickle
     pickle.dump(
-        lin_reg, open(args.artifact_dir + "/Linear_Regression.pkl", "wb")
+        lin_reg,
+        open(
+            args.artifact_dir
+            + "/LINEAR_REGRESSION_{DATA_VERSION}.pkl".format(**master_cfg),
+            "wb",
+        ),
     )
-    pickle.dump(tree_reg, open(args.artifact_dir + "/Decision_Tree.pkl", "wb"))
-    pickle.dump(rf_model, open(args.artifact_dir + "/Random_Forest.pkl", "wb"))
+    pickle.dump(
+        tree_reg,
+        open(
+            args.artifact_dir
+            + "/DECISION_TREE_{DATA_VERSION}.pkl".format(**master_cfg),
+            "wb",
+        ),
+    )
+    pickle.dump(
+        rf_model,
+        open(
+            args.artifact_dir
+            + "/RANDOM_FOREST_{DATA_VERSION}.pkl".format(**master_cfg),
+            "wb",
+        ),
+    )
+
+    logger.info("model dumped succesfully")
+
+    # pdb.set_trace()
+    if args.mlflow_run_id:
+        with mlflow.start_run(run_id=args.mlflow_run_id) as run:
+            mlflow.log_artifact(
+                os.path.join(
+                    master_cfg["PROCESSED_MODELS_PATH"],
+                    "{}_{DATA_VERSION}.pkl".format(
+                        master_cfg["MODELLING"]["MODEL_NAME"], **master_cfg
+                    ),
+                )
+            )
+
+        mlflow.end_run()
+
     logger.debug("Saving model pickles : Complete")
 
 
@@ -155,4 +198,7 @@ def main():
 if __name__ == "__main__":
     args = parse_args()
     logger = create_logger(args.log_dir, args.log_level)
+    config_path = "./config.yml"
+    with open(config_path, "r") as file:
+        master_cfg = yaml.full_load(file)
     main()

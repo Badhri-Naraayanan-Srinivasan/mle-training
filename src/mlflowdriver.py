@@ -38,24 +38,20 @@ with mlflow.start_run(run_name="parent run") as parent_run:
             f"python ingest_data.py --mlflow-run_id={child_run_1.info.run_id}"
         )
 
-    # with mlflow.start_run(
-    #     run_name="model training", nested=True
-    # ) as child_run_2:
-    #     print(
-    #         "mlflow id for model training: {}".format(child_run_2.info.run_id)
-    #     )
-    #     os.system(
-    #         f"python src/train.py --mlflow-run_id={child_run_2.info.run_id}"
-    #     )
+    with mlflow.start_run(
+        run_name="model training", nested=True
+    ) as child_run_2:
+        print(
+            "mlflow id for model training: {}".format(child_run_2.info.run_id)
+        )
+        os.system(f"python train.py --mlflow-run_id={child_run_2.info.run_id}")
 
-    # with mlflow.start_run(
-    #     run_name="model scoring", nested=True
-    # ) as child_run_3:
-    #     print(
-    #         "mlflow id for model scoring: {}".format(child_run_3.info.run_id)
-    #     )
-    #     os.system(
-    #         f"python src/score.py --mlflow-run_id={child_run_3.info.run_id}"
-    #     )
+    with mlflow.start_run(
+        run_name="model scoring", nested=True
+    ) as child_run_3:
+        print(
+            "mlflow id for model scoring: {}".format(child_run_3.info.run_id)
+        )
+        os.system(f"python score.py --mlflow-run_id={child_run_3.info.run_id}")
 
 mlflow.end_run()

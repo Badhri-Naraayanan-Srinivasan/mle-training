@@ -2,8 +2,8 @@ DOWNLOAD_ROOT: "https://raw.githubusercontent.com/ageron/handson-ml/master/"
 HOUSING_PATH: "../datasets/housing/raw"
 HOUSING_URL: "{DOWNLOAD_ROOT}/datasets/housing/housing.tgz"
 DATA_PATH: "/home/badhri/mle_training"
-PROCESSED_DATA_PATH: "{DATA_PATH}/data/datasets/housing/processed"
-PROCESSED_MODELS_PATH: "{DATA_PATH}/artifacts/"
+PROCESSED_DATA_PATH: "/home/badhri/mle_training/data/datasets/housing/processed"
+PROCESSED_MODELS_PATH: "/home/badhri/mle_training/artifacts/"
 DATA_VERSION: 1
 OVERWRITE: TRUE
 

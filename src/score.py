@@ -4,8 +4,10 @@ import pickle
 import sys
 from datetime import datetime
 
+import mlflow
 import numpy as np
 import pandas as pd
+import yaml
 from sklearn.metrics import mean_absolute_error, mean_squared_error
 
 sys.path.insert(0, os.path.abspath(".."))
@@ -60,6 +62,11 @@ def parse_args():
         help="Enter Log level: 'DEBUG' to write logs, default: 'INFO'",
         default="INFO",
         type=str,
+    )
+    parser.add_argument(
+        "--mlflow-run_id",
+        default=False,
+        help="specify the run_id for the run, if you want to save the file in mlflow",
     )
     path = parser.parse_args()
 
@@ -125,7 +132,11 @@ def score_models(X_test, y_test):
     """
     # Read Linear Regression model
     lr_model = pickle.load(
-        open(args.artifact_dir + "/Linear_Regression.pkl", "rb")
+        open(
+            args.artifact_dir
+            + "/LINEAR_REGRESSION_{DATA_VERSION}.pkl".format(**master_cfg),
+            "rb",
+        )
     )
     logger.debug("Linear Regression Model Loading : Complete")
     # Predict for test data
@@ -145,7 +156,11 @@ def score_models(X_test, y_test):
     )
     # Read Decision Tree model
     dt_model = pickle.load(
-        open(args.artifact_dir + "/Decision_Tree.pkl", "rb")
+        open(
+            args.artifact_dir
+            + "/DECISION_TREE_{DATA_VERSION}.pkl".format(**master_cfg),
+            "rb",
+        )
     )
     logger.debug("Decision Tree Model Loading : Complete")
     # Predict for test data
@@ -160,7 +175,11 @@ def score_models(X_test, y_test):
     )
     # Read Random Forest model
     rf_model = pickle.load(
-        open(args.artifact_dir + "/Random_Forest.pkl", "rb")
+        open(
+            args.artifact_dir
+            + "/RANDOM_FOREST_{DATA_VERSION}.pkl".format(**master_cfg),
+            "rb",
+        )
     )
     logger.debug("Random Forest Model Loading : Complete")
     # Predict for test data
@@ -173,6 +192,24 @@ def score_models(X_test, y_test):
         "RMSE on test set using Random Forest is %s",
         round(np.sqrt(rf_rmse), 1),
     )
+
+    if master_cfg["MODELLING"]["MODEL_NAME"] == "LINEAR_REGRESSION":
+        mse = lr_mse
+        rmse = lr_rmse
+
+    if master_cfg["MODELLING"]["MODEL_NAME"] == "DECISION_TREE":
+        mse = dt_mse
+        rmse = dt_rmse
+
+    if master_cfg["MODELLING"]["MODEL_NAME"] == "RANDOM_FOREST":
+        mse = rf_mse
+        rmse = rf_rmse
+
+    if args.mlflow_run_id:
+        with mlflow.start_run(run_id=args.mlflow_run_id) as run:
+            mlflow.log_metric("MSE", mse)
+            mlflow.log_metric("RMSE", rmse)
+        mlflow.end_run()
 
 
 def main():
@@ -187,4 +224,7 @@ def main():
 if __name__ == "__main__":
     args = parse_args()
     logger = create_logger(args.log_dir, args.log_level)
+    config_path = "./config.yml"
+    with open(config_path, "r") as file:
+        master_cfg = yaml.full_load(file)
     main()

@@ -1,0 +1,15 @@
+artifact_uri: /home/badhri/mle_training/src/mlruns/192299802959523595/1884369b8e5243d092aea63e4694667e/artifacts
+end_time: 1686904925112
+entry_point_name: ''
+experiment_id: '192299802959523595'
+lifecycle_stage: active
+run_id: 1884369b8e5243d092aea63e4694667e
+run_name: data_processing
+run_uuid: 1884369b8e5243d092aea63e4694667e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1686904922719
+status: 3
+tags: []
+user_id: badhri
