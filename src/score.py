@@ -205,6 +205,7 @@ def score_models(X_test, y_test):
         mse = rf_mse
         rmse = rf_rmse
 
+    # Log in mlflow
     if args.mlflow_run_id:
         with mlflow.start_run(run_id=args.mlflow_run_id) as run:
             mlflow.log_metric("MSE", mse)
