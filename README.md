@@ -35,3 +35,14 @@ In case of installation issues, remove and recreate. You can remove by running:
 - python ingest_data.py
 - python train.py
 - python score.py
+
+# Procedure to run the code with mlflow
+
+in terminal start the MLFlow tracking server by
+
+- mlflow server --backend-store-uri mlruns/ --default-artifact-root mlruns/ --host 0.0.0.0 --port 5000
+
+- conda env create -f deploy/conda/env.yml
+- conda activate mle-dev
+- cd src
+- python mlflowdriver.py

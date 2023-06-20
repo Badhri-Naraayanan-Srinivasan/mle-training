@@ -27,7 +27,7 @@ print(mlflow.get_tracking_uri())
 with mlflow.start_run(run_name="parent run") as parent_run:
     mlflow.log_param("parent", "yes")
     print("parent run_id: {}".format(parent_run.info.run_id))
-
+    # Start the child runs
     with mlflow.start_run(
         run_name="data_processing", nested=True
     ) as child_run_1:

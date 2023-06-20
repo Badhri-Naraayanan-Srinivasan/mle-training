@@ -481,6 +481,7 @@ def main():
         args.data_dir + "/processed",
         "/test_{DATA_VERSION}.csv".format(**master_cfg),
     )
+    # Log in mlflow
     if args.mlflow_run_id:
         with mlflow.start_run(run_id=args.mlflow_run_id) as run:
             mlflow.log_artifact(

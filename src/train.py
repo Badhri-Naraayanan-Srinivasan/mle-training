@@ -172,7 +172,7 @@ def fit_models(model_data):
 
     logger.info("model dumped succesfully")
 
-    # pdb.set_trace()
+    # Log in mlflow
     if args.mlflow_run_id:
         with mlflow.start_run(run_id=args.mlflow_run_id) as run:
             mlflow.log_artifact(
