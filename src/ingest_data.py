@@ -507,9 +507,13 @@ def main():
         args.data_dir + "/processed",
         "/test_{}.csv".format(config.DATA_VERSION),
     )
+    print(args.mlflow_run_id)
     # Log in mlflow
     if args.mlflow_run_id:
-        with mlflow.start_run(run_id=args.mlflow_run_id) as run:
+        print(mlflow.get_tracking_uri())
+        with mlflow.start_run(
+            run_id=args.mlflow_run_id, run_name="ingest_data"
+        ) as run:
             mlflow.log_artifact(
                 os.path.join(
                     config.PROCESSED_DATA_PATH,

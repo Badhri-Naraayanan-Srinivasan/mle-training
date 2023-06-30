@@ -1,4 +1,5 @@
 import os
+import sysconfig
 
 import config
 import mlflow
@@ -31,15 +32,17 @@ def main():
         print("parent run_id: {}".format(parent_run.info.run_id))
         # Start the child runs
         with mlflow.start_run(
-            run_name="data_processing", nested=True
+            run_name="ingest_data", nested=True
         ) as child_run_1:
             print(
-                "mlflow id for data processing: {}".format(
+                "mlflow id for data ingestion: {}".format(
                     child_run_1.info.run_id
                 )
             )
             os.system(
-                f"python ingest_data.py.py --mlflow-run_id={child_run_1.info.run_id}"
+                "python "
+                + sysconfig.get_paths()["purelib"]
+                + f"/src/ingest_data.py --mlflow-run_id={child_run_1.info.run_id}"
             )
 
         with mlflow.start_run(
@@ -51,7 +54,9 @@ def main():
                 )
             )
             os.system(
-                f"python train.py --mlflow-run_id={child_run_2.info.run_id}"
+                f"python "
+                + sysconfig.get_paths()["purelib"]
+                + f"/src/train.py --mlflow-run_id={child_run_2.info.run_id}"
             )
 
         with mlflow.start_run(
@@ -63,7 +68,9 @@ def main():
                 )
             )
             os.system(
-                f"python score.py --mlflow-run_id={child_run_3.info.run_id}"
+                "python "
+                + sysconfig.get_paths()["purelib"]
+                + f"/src/score.py --mlflow-run_id={child_run_3.info.run_id}"
             )
 
     mlflow.end_run()
