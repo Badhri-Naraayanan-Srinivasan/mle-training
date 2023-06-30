@@ -4,9 +4,9 @@ import pickle
 import sys
 from datetime import datetime
 
+import config
 import mlflow
 import pandas as pd
-import yaml
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import GridSearchCV
@@ -30,7 +30,12 @@ def parse_args():
     """
     # Default Data path
     DATA_PATH = os.path.join(
-        "..", "data", "datasets", "housing", "processed", "training_set.csv"
+        "..",
+        "data",
+        "datasets",
+        "housing",
+        "processed",
+        "train_" + str(config.DATA_VERSION) + ".csv",
     )
     # Default Model path
     ARTIFACT_PATH = os.path.join("..", "artifacts")
@@ -145,27 +150,30 @@ def fit_models(model_data):
     logger.debug("Random Forest model : Generated")
 
     # Saving the models with Pickle
+
     pickle.dump(
         lin_reg,
         open(
             args.artifact_dir
-            + "/LINEAR_REGRESSION_{DATA_VERSION}.pkl".format(**master_cfg),
+            + "/LINEAR_REGRESSION_{}.pkl".format(config.DATA_VERSION),
             "wb",
         ),
     )
+
     pickle.dump(
         tree_reg,
         open(
             args.artifact_dir
-            + "/DECISION_TREE_{DATA_VERSION}.pkl".format(**master_cfg),
+            + "/DECISION_TREE_{}.pkl".format(config.DATA_VERSION),
             "wb",
         ),
     )
+
     pickle.dump(
         rf_model,
         open(
             args.artifact_dir
-            + "/RANDOM_FOREST_{DATA_VERSION}.pkl".format(**master_cfg),
+            + "/RANDOM_FOREST_{}.pkl".format(config.DATA_VERSION),
             "wb",
         ),
     )
@@ -177,9 +185,9 @@ def fit_models(model_data):
         with mlflow.start_run(run_id=args.mlflow_run_id) as run:
             mlflow.log_artifact(
                 os.path.join(
-                    master_cfg["PROCESSED_MODELS_PATH"],
-                    "{}_{DATA_VERSION}.pkl".format(
-                        master_cfg["MODELLING"]["MODEL_NAME"], **master_cfg
+                    config.PROCESSED_MODELS_PATH,
+                    "{}_{}.pkl".format(
+                        config.MODELLING["MODEL_NAME"], config.DATA_VERSION
                     ),
                 )
             )
@@ -191,12 +199,12 @@ def fit_models(model_data):
 
 
 def main():
-    global args, logger, master_cfg
+    global args, logger
     args = parse_args()
     logger = create_logger(args.log_dir, args.log_level)
-    config_path = "./config.yml"
-    with open(config_path, "r") as file:
-        master_cfg = yaml.full_load(file)
+    # config_path = "./config.yml"
+    # with open(config_path, "r") as file:
+    #     master_cfg = yaml.full_load(file)
 
     model_data = pd.read_csv(args.data_dir).drop(columns="Unnamed: 0")
     logger.debug("Model Data Fetching : Complete")

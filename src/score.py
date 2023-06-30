@@ -4,10 +4,10 @@ import pickle
 import sys
 from datetime import datetime
 
+import config
 import mlflow
 import numpy as np
 import pandas as pd
-import yaml
 from sklearn.metrics import mean_absolute_error, mean_squared_error
 
 sys.path.insert(0, os.path.abspath(".."))
@@ -28,7 +28,12 @@ def parse_args():
     """
     # Default Data path
     DATA_PATH = os.path.join(
-        "..", "data", "datasets", "housing", "processed", "testing_set.csv"
+        "..",
+        "data",
+        "datasets",
+        "housing",
+        "processed",
+        "test_" + str(config.DATA_VERSION) + ".csv",
     )
     # Default Model path
     ARTIFACT_PATH = os.path.join("..", "artifacts")
@@ -134,7 +139,7 @@ def score_models(X_test, y_test):
     lr_model = pickle.load(
         open(
             args.artifact_dir
-            + "/LINEAR_REGRESSION_{DATA_VERSION}.pkl".format(**master_cfg),
+            + "/LINEAR_REGRESSION_{}.pkl".format(config.DATA_VERSION),
             "rb",
         )
     )
@@ -158,7 +163,7 @@ def score_models(X_test, y_test):
     dt_model = pickle.load(
         open(
             args.artifact_dir
-            + "/DECISION_TREE_{DATA_VERSION}.pkl".format(**master_cfg),
+            + "/DECISION_TREE_{}.pkl".format(config.DATA_VERSION),
             "rb",
         )
     )
@@ -177,7 +182,7 @@ def score_models(X_test, y_test):
     rf_model = pickle.load(
         open(
             args.artifact_dir
-            + "/RANDOM_FOREST_{DATA_VERSION}.pkl".format(**master_cfg),
+            + "/RANDOM_FOREST_{}.pkl".format(config.DATA_VERSION),
             "rb",
         )
     )
@@ -193,15 +198,15 @@ def score_models(X_test, y_test):
         round(np.sqrt(rf_rmse), 1),
     )
 
-    if master_cfg["MODELLING"]["MODEL_NAME"] == "LINEAR_REGRESSION":
+    if config.MODELLING["MODEL_NAME"] == "LINEAR_REGRESSION":
         mse = lr_mse
         rmse = lr_rmse
 
-    if master_cfg["MODELLING"]["MODEL_NAME"] == "DECISION_TREE":
+    if config.MODELLING["MODEL_NAME"] == "DECISION_TREE":
         mse = dt_mse
         rmse = dt_rmse
 
-    if master_cfg["MODELLING"]["MODEL_NAME"] == "RANDOM_FOREST":
+    if config.MODELLING["MODEL_NAME"] == "RANDOM_FOREST":
         mse = rf_mse
         rmse = rf_rmse
 
@@ -215,12 +220,12 @@ def score_models(X_test, y_test):
 
 
 def main():
-    global args, logger, master_cfg
+    global args, logger
     args = parse_args()
     logger = create_logger(args.log_dir, args.log_level)
-    config_path = "./config.yml"
-    with open(config_path, "r") as file:
-        master_cfg = yaml.full_load(file)
+    # config_path = "./config.yml"
+    # with open(config_path, "r") as file:
+    #     master_cfg = yaml.full_load(file)
 
     # Get prepared test data
     X_test_prepared, y_test = get_prepared_test_data()

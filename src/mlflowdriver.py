@@ -1,27 +1,27 @@
 import os
 
+import config
 import mlflow
 import mlflow.sklearn
-import yaml
 
 
 def main():
-    config_path = "config.yml"
-    with open(config_path, "r") as file:
-        master_cfg = yaml.full_load(file)
+    # config_path = "config.yml"
+    # with open(config_path, "r") as file:
+    #     master_cfg = yaml.full_load(file)
 
-    for key_ in master_cfg:
-        try:
-            key_, value_ = key_, master_cfg[key_].format(**master_cfg)
-            master_cfg[key_] = value_
-        except Exception as e:
-            type(e)  # to avoid flake8 error
-            key_, value_ = key_, master_cfg[key_]
+    # for key_ in master_cfg:
+    #     try:
+    #         key_, value_ = key_, master_cfg[key_].format(**master_cfg)
+    #         master_cfg[key_] = value_
+    #     except Exception as e:
+    #         type(e)  # to avoid flake8 error
+    #         key_, value_ = key_, master_cfg[key_]
 
-    remote_server_uri = master_cfg["MLFLOW"]["REMOTE_SERVER_URI"]
+    remote_server_uri = config.MLFLOW["REMOTE_SERVER_URI"]
     mlflow.set_tracking_uri(remote_server_uri)
 
-    exp_name = master_cfg["MLFLOW"]["EXPERIMENT_NAME"]
+    exp_name = config.MLFLOW["EXPERIMENT_NAME"]
     mlflow.set_experiment(exp_name)
 
     print(mlflow.get_tracking_uri())
@@ -39,7 +39,7 @@ def main():
                 )
             )
             os.system(
-                f"python ingest_data.py --mlflow-run_id={child_run_1.info.run_id}"
+                f"python ingest_data.py.py --mlflow-run_id={child_run_1.info.run_id}"
             )
 
         with mlflow.start_run(

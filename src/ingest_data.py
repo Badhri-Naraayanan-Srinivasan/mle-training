@@ -6,11 +6,11 @@ import tarfile
 import urllib.request
 from datetime import datetime
 
+import config
 import mlflow
 import mlflow.sklearn
 import numpy as np
 import pandas as pd
-import yaml
 from sklearn.base import BaseEstimator, TransformerMixin
 from sklearn.compose import ColumnTransformer
 from sklearn.impute import SimpleImputer
@@ -195,21 +195,21 @@ class Imputer(_BaseImputer, TransformerMixin):
             categorical constant to use when the cat_imputer is constant
     """
 
-    def __init__(self, cfg):
-        if cfg["IMPUTE"]["NUMERICAL_CONSTANT"] is not None:
+    def __init__(self):
+        if config.IMPUTE["NUMERICAL_CONSTANT"] is not None:
             num_impute = "constant"
         else:
-            num_impute = cfg["IMPUTE"]["NUMERICAL_STRATEGY"]
+            num_impute = config.IMPUTE["NUMERICAL_STRATEGY"]
 
-        if cfg["IMPUTE"]["CATEGORICAL_CONSTANT"] is not None:
+        if config.IMPUTE["CATEGORICAL_CONSTANT"] is not None:
             cat_impute = "constant"
         else:
-            cat_impute = cfg["IMPUTE"]["CATEGORICAL_STRATEGY"]
+            cat_impute = config.IMPUTE["CATEGORICAL_STRATEGY"]
 
-        num_constant = cfg["IMPUTE"]["NUMERICAL_CONSTANT"]
-        cat_constant = cfg["IMPUTE"]["CATEGORICAL_CONSTANT"]
+        num_constant = config.IMPUTE["NUMERICAL_CONSTANT"]
+        cat_constant = config.IMPUTE["CATEGORICAL_CONSTANT"]
         missing_values = np.nan
-        add_indicator = cfg["IMPUTE"]["ADD_INDICATOR"]
+        add_indicator = config.IMPUTE["ADD_INDICATOR"]
 
         super().__init__(
             missing_values=missing_values, add_indicator=add_indicator
@@ -377,7 +377,7 @@ def process_data(housing, test):
         [
             (
                 "imputer",
-                Imputer(master_cfg),
+                Imputer(),
             ),
             (
                 "attribs_adder",
@@ -398,17 +398,25 @@ def process_data(housing, test):
             ),
         ]
     )
-    pickle.dump(
-        pl,
-        open(
-            os.path.join(
-                "..",
-                "artifacts",
-                "pipeline_{DATA_VERSION}.pkl".format(**master_cfg),
-            ),
-            "wb",
+    os.makedirs(
+        os.path.join(
+            "..",
+            "artifacts",
         ),
+        exist_ok=True,
     )
+    with open(
+        os.path.join(
+            "..",
+            "artifacts",
+            "pipeline_{}.pkl".format(config.DATA_VERSION),
+        ),
+        "wb",
+    ) as path:
+        pickle.dump(
+            pl,
+            path,
+        )
     housing_prepared = pd.DataFrame(
         pl.fit_transform(housing),
         columns=[
@@ -462,22 +470,22 @@ def main():
     )
     HOUSING_URL = DOWNLOAD_ROOT + "datasets/housing/housing.tgz"
 
-    global args, logger, master_cfg
+    global args, logger
 
     args = parse_args(sys.argv[1:])
     logger = create_logger(args.log_dir, args.log_level)
-    config_path = "./config.yml"
-    with open(config_path, "r") as file:
-        master_cfg = yaml.full_load(file)
-    # master_cfg = yaml.load(config_path)
+    # config_path = "./config.yml"
+    # with open(config_path, "r") as file:
+    #     master_cfg = yaml.full_load(file)
+    # # master_cfg = yaml.load(config_path)
 
-    for key_ in master_cfg:
-        try:
-            key_, value_ = key_, master_cfg[key_].format(**master_cfg)
-            master_cfg[key_] = value_
-        except Exception as e:
-            type(e)  # to avoid flake8 error
-            key_, value_ = key_, master_cfg[key_]
+    # for key_ in master_cfg:
+    #     try:
+    #         key_, value_ = key_, master_cfg[key_].format(**master_cfg)
+    #         master_cfg[key_] = value_
+    #     except Exception as e:
+    #         type(e)  # to avoid flake8 error
+    #         key_, value_ = key_, master_cfg[key_]
 
     # Fetch raw data
     housing = fetch_housing_data(housing_url=HOUSING_URL)
@@ -491,33 +499,33 @@ def main():
     store_dataset(
         housing_prepared,
         args.data_dir + "/processed",
-        "/train_{DATA_VERSION}.csv".format(**master_cfg),
+        "/train_{}.csv".format(config.DATA_VERSION),
     )
     # Store raw test dataset
     store_dataset(
         test_prepared,
         args.data_dir + "/processed",
-        "/test_{DATA_VERSION}.csv".format(**master_cfg),
+        "/test_{}.csv".format(config.DATA_VERSION),
     )
     # Log in mlflow
     if args.mlflow_run_id:
         with mlflow.start_run(run_id=args.mlflow_run_id) as run:
             mlflow.log_artifact(
                 os.path.join(
-                    master_cfg["PROCESSED_DATA_PATH"],
-                    "train_{DATA_VERSION}.csv".format(**master_cfg),
+                    config.PROCESSED_DATA_PATH,
+                    "train_{}.csv".format(config.DATA_VERSION),
                 )
             )
             mlflow.log_artifact(
                 os.path.join(
-                    master_cfg["PROCESSED_DATA_PATH"],
-                    "test_{DATA_VERSION}.csv".format(**master_cfg),
+                    config.PROCESSED_DATA_PATH,
+                    "test_{}.csv".format(config.DATA_VERSION),
                 )
             )
             mlflow.log_artifact(
                 os.path.join(
-                    master_cfg["PROCESSED_MODELS_PATH"],
-                    "pipeline_{DATA_VERSION}.pkl".format(**master_cfg),
+                    config.PROCESSED_MODELS_PATH,
+                    "pipeline_{}.pkl".format(config.DATA_VERSION),
                 )
             )
         print("logged in mlflow")
