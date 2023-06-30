@@ -210,10 +210,18 @@ def score_models(X_test, y_test):
         with mlflow.start_run(run_id=args.mlflow_run_id) as run:
             mlflow.log_metric("MSE", mse)
             mlflow.log_metric("RMSE", rmse)
+        print("logged in mlflow")
         mlflow.end_run()
 
 
 def main():
+    global args, logger, master_cfg
+    args = parse_args()
+    logger = create_logger(args.log_dir, args.log_level)
+    config_path = "./config.yml"
+    with open(config_path, "r") as file:
+        master_cfg = yaml.full_load(file)
+
     # Get prepared test data
     X_test_prepared, y_test = get_prepared_test_data()
     logger.debug("Testing Data Preparation : Complete")
@@ -223,9 +231,4 @@ def main():
 
 
 if __name__ == "__main__":
-    args = parse_args()
-    logger = create_logger(args.log_dir, args.log_level)
-    config_path = "./config.yml"
-    with open(config_path, "r") as file:
-        master_cfg = yaml.full_load(file)
     main()

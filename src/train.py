@@ -183,6 +183,7 @@ def fit_models(model_data):
                     ),
                 )
             )
+        print("logged in mlflow")
 
         mlflow.end_run()
 
@@ -190,15 +191,17 @@ def fit_models(model_data):
 
 
 def main():
+    global args, logger, master_cfg
+    args = parse_args()
+    logger = create_logger(args.log_dir, args.log_level)
+    config_path = "./config.yml"
+    with open(config_path, "r") as file:
+        master_cfg = yaml.full_load(file)
+
     model_data = pd.read_csv(args.data_dir).drop(columns="Unnamed: 0")
     logger.debug("Model Data Fetching : Complete")
     fit_models(model_data)
 
 
 if __name__ == "__main__":
-    args = parse_args()
-    logger = create_logger(args.log_dir, args.log_level)
-    config_path = "./config.yml"
-    with open(config_path, "r") as file:
-        master_cfg = yaml.full_load(file)
     main()

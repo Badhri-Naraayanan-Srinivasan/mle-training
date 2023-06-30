@@ -461,6 +461,24 @@ def main():
         "https://raw.githubusercontent.com/ageron/handson-ml/master/"
     )
     HOUSING_URL = DOWNLOAD_ROOT + "datasets/housing/housing.tgz"
+
+    global args, logger, master_cfg
+
+    args = parse_args(sys.argv[1:])
+    logger = create_logger(args.log_dir, args.log_level)
+    config_path = "./config.yml"
+    with open(config_path, "r") as file:
+        master_cfg = yaml.full_load(file)
+    # master_cfg = yaml.load(config_path)
+
+    for key_ in master_cfg:
+        try:
+            key_, value_ = key_, master_cfg[key_].format(**master_cfg)
+            master_cfg[key_] = value_
+        except Exception as e:
+            type(e)  # to avoid flake8 error
+            key_, value_ = key_, master_cfg[key_]
+
     # Fetch raw data
     housing = fetch_housing_data(housing_url=HOUSING_URL)
     logger.debug("Raw data Fetching : Completed")
@@ -509,18 +527,4 @@ def main():
 
 
 if __name__ == "__main__":
-    args = parse_args(sys.argv[1:])
-    logger = create_logger(args.log_dir, args.log_level)
-    config_path = "./config.yml"
-    with open(config_path, "r") as file:
-        master_cfg = yaml.full_load(file)
-    # master_cfg = yaml.load(config_path)
-
-    for key_ in master_cfg:
-        try:
-            key_, value_ = key_, master_cfg[key_].format(**master_cfg)
-            master_cfg[key_] = value_
-        except Exception as e:
-            type(e)  # to avoid flake8 error
-            key_, value_ = key_, master_cfg[key_]
     main()
